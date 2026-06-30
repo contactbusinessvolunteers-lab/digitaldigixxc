@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our All Services & Pricing — 70+ Services | Digital Digix</title>
+<meta name="description" content="360 digital solutions: SEO, Google & Meta Ads, social media, graphic design, websites, video, business growth, local SEO and business documents. Transparent pricing across 70+ services.">
+<link rel="canonical" href="https://businessvolunteers.online/services">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Our All Services & Pricing — Digital Digix">
+<meta property="og:description" content="70+ services across 8 categories with transparent pricing.">
+<meta property="og:url" content="https://businessvolunteers.online/services">
+<meta property="og:image" content="https://businessvolunteers.online/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+/* ============================================================
+   DIGITAL DIGIX — Digital Marketing & AI Search Platform
+   Shared Design System  (Section 01 + 11 of the spec)
+   Single stylesheet powering every page. Light + dark mode.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ---------- DESIGN TOKENS ---------- */
+:root {
+  /* Brand — Business Volunteers: emerald green + gold + cream */
+  --purple:    #15694A;   /* primary emerald (brand) */
+  --purple-2:  #1C8A61;   /* hover */
+  --purple-dk: #0B3D2B;   /* deep forest */
+  --purple-lt: #E1F0E8;   /* pale mint tint */
+  --teal:      #0F7A57;   /* secondary green */
+  --teal-dk:   #0C5E43;
+  --teal-lt:   #DCF0E6;
+  --coral:     #B5612F;   /* warm terracotta accent */
+  --coral-lt:  #F7E9DF;
+  --amber:     #CF9A12;   /* gold accent */
+  --amber-lt:  #FBF0D6;
+  --blue:      #2C7A6B;   /* deep teal-green */
+  --blue-lt:   #DEEFEB;
+  --pink:      #9C6B2E;   /* bronze */
+  --pink-lt:   #F4EADD;
+
+  /* Neutrals (warm cream) */
+  --ink:       #14241C;
+  --text:      #14241C;
+  --text2:     #4C5A50;
+  --text3:     #889389;
+  --border:    #DEE7E0;
+  --border2:   #CCD9CF;
+  --bg:        #F6F8F5;
+  --surface:   #FFFFFF;
+  --surface2:  #EEF3EE;
+  --dark-band: #0B2A1E;
+
+  /* Effects */
+  --shadow-sm: 0 1px 2px rgba(20,36,28,.05), 0 1px 3px rgba(20,36,28,.04);
+  --shadow-md: 0 4px 12px rgba(20,36,28,.06), 0 2px 6px rgba(20,36,28,.05);
+  --shadow-lg: 0 18px 50px -12px rgba(11,61,43,.22), 0 6px 18px rgba(20,36,28,.08);
+  --shadow-glow: 0 0 0 3px rgba(21,105,74,.18);
+
+  /* Geometry */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-full: 9999px;
+  --max-width: 1240px;
+
+  --nav-h: 70px;
+  --ease: cubic-bezier(.25,.46,.45,.94);
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+  --purple:    #43C28C;   /* light emerald */
+  --purple-2:  #5FD7A1;
+  --purple-dk: #BFEAD6;
+  --purple-lt: #123528;
+  --teal:      #46C892;
+  --teal-dk:   #2FA376;
+  --teal-lt:   #0E3328;
+  --coral:     #E0915A;
+  --coral-lt:  #3A2316;
+  --amber:     #E8B53C;   /* gold */
+  --amber-lt:  #3A2E12;
+  --blue:      #5FB6A2;
+  --blue-lt:   #10302A;
+  --pink:      #C9925A;
+  --pink-lt:   #322316;
+
+  --ink:       #ECF3EE;
+  --text:      #ECF3EE;
+  --text2:     #AFC0B5;
+  --text3:     #7E9085;
+  --border:    #1E3328;
+  --border2:   #284335;
+  --bg:        #0A1711;
+  --surface:   #0F2018;
+  --surface2:  #16291F;
+  --dark-band: #06120C;
+
+  --shadow-lg: 0 18px 50px -12px rgba(0,0,0,.6), 0 6px 18px rgba(0,0,0,.4);
+  --shadow-glow: 0 0 0 3px rgba(67,194,140,.25);
+}
+
+/* ---------- RESET ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background .4s var(--ease), color .4s var(--ease);
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+::selection { background: var(--purple); color: #fff; }
+
+/* ---------- LAYOUT ---------- */
+.container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+.section { padding: 96px 0; position: relative; }
+.section-sm { padding: 64px 0; }
+.section.dark { background: var(--dark-band); color: #F1EFE8; }
+.section.tint { background: var(--surface2); }
+@media (max-width: 720px){ .section { padding: 64px 0; } }
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: .72rem; font-weight: 700; letter-spacing: .15em;
+  text-transform: uppercase; color: var(--purple);
+}
+.eyebrow::before { content:""; width:18px; height:2px; background: var(--purple); border-radius: 2px; }
+.center .eyebrow::before { display: none; }
+
+.section-head { max-width: 640px; margin-bottom: 48px; }
+.section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+
+/* ---------- TYPOGRAPHY ---------- */
+h1,h2,h3,h4 { color: var(--text); line-height: 1.12; letter-spacing: -.02em; font-weight: 800; }
+.display {
+  font-size: clamp(2.6rem, 6vw, 4.4rem); font-weight: 900;
+  letter-spacing: -.035em; line-height: 1.04;
+}
+h1 { font-size: clamp(2rem, 4vw, 3rem); }
+h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); letter-spacing: -.025em; }
+h3 { font-size: 1.2rem; font-weight: 700; letter-spacing: -.01em; }
+.lead { font-size: clamp(1.05rem, 1.6vw, 1.25rem); color: var(--text2); line-height: 1.6; font-weight: 400; }
+p { color: var(--text2); }
+.muted { color: var(--text3); }
+.grad { background: linear-gradient(110deg, var(--purple) 0%, var(--amber) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.serif { font-family: 'Fraunces', Georgia, serif; font-style: italic; }
+code, .mono { font-family: 'JetBrains Mono', monospace; }
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  font-weight: 600; font-size: .95rem; line-height: 1;
+  padding: 0 22px; height: 50px; border-radius: var(--radius-full);
+  transition: transform .15s var(--ease), background .2s var(--ease), box-shadow .2s var(--ease), border-color .2s var(--ease), color .2s var(--ease);
+  white-space: nowrap; border: 1.5px solid transparent;
+}
+.btn svg { width: 18px; height: 18px; transition: transform .2s var(--ease); }
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+.btn-primary { background: var(--purple); color: #fff; box-shadow: 0 8px 20px -6px rgba(21,105,74,.5); }
+.btn-primary:hover { background: var(--purple-2); box-shadow: 0 12px 28px -6px rgba(21,105,74,.55); }
+.btn-primary:hover svg { transform: translateX(4px); }
+.btn-ghost { background: transparent; color: var(--text); border-color: var(--border2); }
+.btn-ghost:hover { border-color: var(--purple); color: var(--purple); }
+.btn-white { background: #fff; color: var(--purple-dk); }
+.btn-white:hover { background: #f1effe; }
+.btn-outline-white { border-color: rgba(255,255,255,.4); color: #fff; }
+.btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+.btn-sm { height: 42px; padding: 0 18px; font-size: .88rem; }
+.btn-lg { height: 56px; padding: 0 30px; font-size: 1.02rem; }
+
+/* ---------- TAGS / PILLS / BADGES ---------- */
+.pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: .76rem; font-weight: 500; padding: 5px 12px;
+  border-radius: var(--radius-full); border: 1px solid var(--border2);
+  color: var(--text2); background: var(--surface);
+}
+.pills { display: flex; flex-wrap: wrap; gap: 7px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: .74rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+  padding: 6px 13px; border-radius: var(--radius-full);
+  background: var(--purple-lt); color: var(--purple); border: 1px solid color-mix(in srgb, var(--purple) 28%, transparent);
+}
+.badge { display:inline-block; font-size:.7rem; font-weight:700; padding:3px 10px; border-radius: var(--radius-full); }
+
+/* category color helpers */
+.c-purple{ --c: var(--purple); --c-lt: var(--purple-lt); }
+.c-teal  { --c: var(--teal);   --c-lt: var(--teal-lt); }
+.c-coral { --c: var(--coral);  --c-lt: var(--coral-lt); }
+.c-blue  { --c: var(--blue);   --c-lt: var(--blue-lt); }
+.c-amber { --c: var(--amber);  --c-lt: var(--amber-lt); }
+.c-pink  { --c: var(--pink);   --c-lt: var(--pink-lt); }
+
+/* ---------- CARDS ---------- */
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-md); padding: 26px;
+  transition: transform .2s var(--ease), border-color .2s var(--ease), box-shadow .2s var(--ease);
+}
+.card-hover:hover { transform: translateY(-5px); border-color: var(--border2); box-shadow: var(--shadow-lg); }
+.card-top { border-top: 3px solid var(--c, var(--purple)); }
+
+.icon-circle {
+  width: 50px; height: 50px; border-radius: 14px;
+  display: grid; place-items: center;
+  background: var(--c-lt, var(--purple-lt)); color: var(--c, var(--purple));
+  margin-bottom: 16px;
+}
+.icon-circle svg { width: 24px; height: 24px; }
+
+/* grids */
+.grid { display: grid; gap: 22px; }
+.g2 { grid-template-columns: repeat(2,1fr); }
+.g3 { grid-template-columns: repeat(3,1fr); }
+.g4 { grid-template-columns: repeat(4,1fr); }
+@media (max-width: 980px){ .g3,.g4 { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 640px){ .g2,.g3,.g4 { grid-template-columns: 1fr; } }
+
+/* ---------- NAVBAR ---------- */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: var(--nav-h);
+  display: flex; align-items: center;
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  border-bottom: 1px solid transparent;
+  transition: background .3s var(--ease), border-color .3s var(--ease), box-shadow .3s var(--ease);
+}
+.nav.scrolled {
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  -webkit-backdrop-filter: saturate(180%) blur(14px); backdrop-filter: saturate(180%) blur(14px);
+  border-bottom-color: var(--border); box-shadow: var(--shadow-sm);
+}
+.nav-inner { width:100%; max-width: var(--max-width); margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap: 20px; }
+.logo { display:flex; align-items:center; gap:10px; font-weight:800; font-size:1.18rem; letter-spacing:-.02em; flex-shrink:0; }
+.logo-mark { width:34px; height:34px; flex-shrink:0; }
+.nav-links { display:flex; align-items:center; gap:2px; }
+.nav-link {
+  position: relative; font-size:.92rem; font-weight:500; color:var(--text2);
+  padding: 9px 13px; border-radius: 8px; display:inline-flex; align-items:center; gap:5px;
+  transition: color .2s var(--ease);
+}
+.nav-link:hover, .nav-link.active { color: var(--text); }
+.nav-link .caret { width:14px; height:14px; transition: transform .2s var(--ease); }
+.nav-item:hover .nav-link .caret { transform: rotate(180deg); }
+.nav-link.active::after {
+  content:""; position:absolute; left:13px; right:13px; bottom:2px; height:2px;
+  background: var(--purple); border-radius:2px;
+}
+.nav-cta { display:flex; align-items:center; gap:10px; flex-shrink:0; }
+
+/* theme toggle */
+.theme-toggle {
+  width:40px; height:40px; border-radius: var(--radius-full); display:grid; place-items:center;
+  border:1.5px solid var(--border2); color: var(--text2); transition: all .2s var(--ease);
+}
+.theme-toggle:hover { color: var(--purple); border-color: var(--purple); }
+.theme-toggle svg { width:18px; height:18px; }
+.theme-toggle .moon { display:none; }
+[data-theme="dark"] .theme-toggle .sun { display:none; }
+[data-theme="dark"] .theme-toggle .moon { display:block; }
+
+/* mega menu */
+.nav-item { position: relative; }
+.mega {
+  position: absolute; top: calc(100% + 14px); left: 50%; transform: translateX(-50%) translateY(8px);
+  width: min(860px, 92vw); background: var(--surface); border:1px solid var(--border);
+  border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); padding: 22px;
+  opacity:0; visibility:hidden; pointer-events:none;
+  transition: opacity .2s var(--ease), transform .2s var(--ease), visibility .2s;
+  display:grid; grid-template-columns: 1.5fr 1fr; gap: 22px;
+}
+.mega::before { content:""; position:absolute; top:-14px; left:0; right:0; height:14px; }
+.nav-item:hover .mega, .mega:hover { opacity:1; visibility:visible; pointer-events:auto; transform: translateX(-50%) translateY(0); }
+.mega-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.mega-link { display:flex; gap:12px; padding:11px; border-radius: 12px; transition: background .15s var(--ease); }
+.mega-link:hover { background: var(--surface2); }
+.mega-ic { width:38px; height:38px; border-radius:10px; display:grid; place-items:center; flex-shrink:0; background: var(--c-lt, var(--purple-lt)); color: var(--c, var(--purple)); }
+.mega-ic svg { width:19px; height:19px; }
+.mega-link h4 { font-size:.9rem; font-weight:700; margin-bottom:1px; color: var(--text); text-transform:none; letter-spacing:-.01em; }
+.mega-link p { font-size:.78rem; color: var(--text3); line-height:1.4; margin:0; }
+.mega-feat { background: linear-gradient(160deg, var(--purple) 0%, var(--purple-dk) 100%); border-radius: var(--radius-md); padding: 20px; color:#fff; display:flex; flex-direction:column; justify-content:space-between; }
+.mega-feat .chip { background: rgba(255,255,255,.16); color:#fff; border-color: rgba(255,255,255,.25); }
+.mega-feat h4 { color:#fff; font-size:1.05rem; margin:14px 0 6px; text-transform:none; letter-spacing:-.01em; }
+.mega-feat p { color: rgba(255,255,255,.8); font-size:.82rem; margin:0; }
+.mega-feat a { margin-top:14px; font-weight:600; font-size:.85rem; display:inline-flex; gap:6px; align-items:center; }
+
+/* hamburger + mobile */
+.hamburger { display:none; width:42px; height:42px; border-radius:10px; border:1.5px solid var(--border2); flex-direction:column; align-items:center; justify-content:center; gap:5px; }
+.hamburger span { width:18px; height:2px; background: var(--text); border-radius:2px; transition: transform .3s var(--ease), opacity .2s var(--ease); }
+.mobile-menu {
+  position: fixed; inset: 0; z-index: 1100; background: var(--bg);
+  transform: translateX(100%); transition: transform .3s var(--ease);
+  display:flex; flex-direction:column; padding: 90px 24px 30px; overflow-y:auto;
+}
+.mobile-menu.open { transform: translateX(0); }
+.mobile-menu a { padding: 15px 4px; font-size:1.15rem; font-weight:600; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+.mobile-close { position:absolute; top:20px; right:24px; width:42px; height:42px; border-radius:10px; border:1.5px solid var(--border2); display:grid; place-items:center; }
+body.menu-open { overflow: hidden; }
+
+@media (max-width: 940px){
+  .nav-links, .nav-cta .btn, .nav-cta .theme-toggle { display:none; }
+  .hamburger { display:flex; }
+}
+
+/* ---------- HERO ---------- */
+.hero { position: relative; padding: calc(var(--nav-h) + 70px) 0 80px; overflow: hidden; }
+.hero-grid { display:grid; grid-template-columns: 1.05fr .95fr; gap: 50px; align-items:center; }
+@media (max-width: 940px){ .hero-grid { grid-template-columns:1fr; gap:40px; } }
+.hero-bg { position:absolute; inset:0; z-index:-1; pointer-events:none; }
+.hero-blob { position:absolute; border-radius:50%; filter: blur(70px); opacity:.5; }
+.b1 { width:460px; height:460px; background: radial-gradient(circle, rgba(21,105,74,.5), transparent 70%); top:-120px; right:-80px; }
+.b2 { width:380px; height:380px; background: radial-gradient(circle, rgba(207,154,18,.4), transparent 70%); bottom:-120px; left:-100px; }
+[data-theme="dark"] .hero-blob { opacity:.35; }
+.hero h1 { margin: 18px 0 22px; }
+.hero .lead { max-width: 520px; }
+.hero-cta { display:flex; flex-wrap:wrap; gap:14px; margin: 30px 0 22px; }
+.stars { color: var(--amber); letter-spacing:1px; }
+.hero-proof { display:flex; align-items:center; gap:10px; font-size:.88rem; color: var(--text2); }
+
+.trust-bar { display:flex; flex-wrap:wrap; align-items:center; gap: 26px; margin-top: 38px; padding-top: 26px; border-top:1px solid var(--border); }
+.trust-bar span { font-size:.78rem; font-weight:600; letter-spacing:.04em; color: var(--text3); display:inline-flex; align-items:center; gap:7px; }
+.trust-bar svg { width:16px; height:16px; opacity:.7; }
+
+/* floating hero visual */
+.hero-visual { position: relative; height: 460px; }
+@media (max-width: 940px){ .hero-visual { height: 380px; } }
+.float-card {
+  position:absolute; background: var(--surface); border:1px solid var(--border);
+  border-radius: var(--radius-md); box-shadow: var(--shadow-lg); padding: 16px 18px;
+}
+.fc-1 { top: 14%; left: 4%; width: 250px; animation: float 6s var(--ease) infinite; }
+.fc-2 { top: 44%; right: 0; width: 230px; animation: float 6s var(--ease) infinite .8s; }
+.fc-3 { bottom: 6%; left: 16%; width: 210px; animation: float 6s var(--ease) infinite 1.6s; }
+.fc-head { display:flex; align-items:center; gap:9px; margin-bottom:11px; font-size:.8rem; font-weight:700; }
+.fc-dot { width:9px; height:9px; border-radius:50%; }
+.fc-bar { height:7px; border-radius:4px; background: var(--surface2); margin:6px 0; overflow:hidden; }
+.fc-bar i { display:block; height:100%; border-radius:4px; background: linear-gradient(90deg,var(--purple),var(--amber)); }
+.fc-num { font-size:1.7rem; font-weight:900; letter-spacing:-.03em; }
+@keyframes float { 0%,100%{ transform: translateY(0) rotate(0); } 33%{ transform: translateY(-14px) rotate(.8deg);} 66%{ transform: translateY(-6px) rotate(-.6deg);} }
+.ring { transform: rotate(-90deg); }
+.ring circle { fill:none; stroke-width: 7; }
+.ring .track { stroke: var(--surface2); }
+.ring .val { stroke: var(--teal); stroke-linecap: round; }
+
+/* ---------- STATS ---------- */
+.stat-band { background: var(--surface2); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+.stats { display:grid; grid-template-columns: repeat(4,1fr); }
+.stat { text-align:center; padding: 36px 16px; position:relative; }
+.stat + .stat::before { content:""; position:absolute; left:0; top:24px; bottom:24px; width:1px; background: var(--border); }
+.stat-num { font-size: clamp(2rem,3.4vw,2.8rem); font-weight:900; letter-spacing:-.03em; color: var(--text); line-height:1; }
+.stat-num .grad { display:inline; }
+.stat-label { font-size:.86rem; color: var(--text2); margin-top:8px; font-weight:500; }
+@media (max-width:640px){ .stats { grid-template-columns: repeat(2,1fr); } .stat:nth-child(3)::before, .stat:nth-child(odd)::before { display:none; } }
+
+/* ---------- SERVICE CARD ---------- */
+.svc-card { display:flex; flex-direction:column; height:100%; }
+.svc-card h3 { margin-bottom: 8px; }
+.svc-card p { font-size:.9rem; line-height:1.55; margin-bottom: 14px; }
+.svc-card .pills { margin-bottom: auto; }
+.svc-foot { display:flex; align-items:center; justify-content:space-between; margin-top: 18px; padding-top:16px; border-top:1px solid var(--border); }
+.svc-price { font-size:.9rem; font-weight:700; color: var(--c, var(--purple)); }
+.svc-arrow { display:inline-flex; align-items:center; gap:5px; font-size:.85rem; font-weight:600; color: var(--text2); transition: gap .2s var(--ease), color .2s var(--ease); }
+.card-hover:hover .svc-arrow { gap:9px; color: var(--c, var(--purple)); }
+.svc-arrow svg { width:15px; height:15px; }
+
+/* ---------- DARK TOOLS SECTION ---------- */
+.tool-card { background: rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.1); border-radius: var(--radius-md); padding: 24px; transition: border-color .2s var(--ease), transform .2s var(--ease); }
+.tool-card:hover { border-color: rgba(255,255,255,.25); transform: translateY(-4px); }
+.tool-card h3 { color:#fff; }
+.tool-card p { color: rgba(241,239,232,.65); font-size:.88rem; }
+.tool-input { display:flex; gap:8px; margin-top:16px; }
+.tool-input input { flex:1; height:46px; border-radius: var(--radius-full); border:1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.06); color:#fff; padding:0 18px; font-size:.9rem; outline:none; transition: border-color .2s var(--ease); }
+.tool-input input::placeholder { color: rgba(255,255,255,.45); }
+.tool-input input:focus { border-color: var(--purple-2); }
+
+/* radial gauges (audit modal) */
+.gauges { display:grid; grid-template-columns: repeat(5,1fr); gap:14px; }
+@media (max-width:640px){ .gauges { grid-template-columns: repeat(2,1fr); } }
+.gauge { text-align:center; }
+.gauge svg { width:84px; height:84px; }
+.gauge-label { font-size:.74rem; color: var(--text2); margin-top:6px; font-weight:600; }
+.gauge .pct { font-size:1rem; font-weight:800; }
+
+/* ---------- STEPS / TIMELINE ---------- */
+.timeline { position: relative; display:grid; grid-template-columns: repeat(4,1fr); gap: 22px; }
+.timeline::before { content:""; position:absolute; top:23px; left:8%; right:8%; height:2px; background: repeating-linear-gradient(90deg, var(--border2) 0 8px, transparent 8px 16px); }
+@media (max-width:820px){ .timeline { grid-template-columns:1fr; gap:0; } .timeline::before{ display:none; } }
+.tstep { position:relative; z-index:1; }
+.tstep-num { width:48px; height:48px; border-radius:50%; background: var(--bg); border:2px solid var(--purple); color: var(--purple); display:grid; place-items:center; font-weight:800; font-size:1.05rem; margin-bottom:16px; }
+.tstep h3 { font-size:1.05rem; margin-bottom:6px; }
+.tstep p { font-size:.88rem; line-height:1.55; }
+.tstep .badge { margin-top:10px; background: var(--purple-lt); color: var(--purple); }
+@media (max-width:820px){ .tstep { display:grid; grid-template-columns:48px 1fr; gap:16px; padding-bottom:30px; } .tstep-num{ margin:0; } .tstep > div { grid-column:2; } }
+
+/* ---------- TESTIMONIALS ---------- */
+.quote { display:flex; flex-direction:column; height:100%; }
+.quote .stars { font-size:.95rem; margin-bottom:12px; }
+.quote-text { font-size:1.02rem; line-height:1.6; color: var(--text); margin-bottom: auto; }
+.quote-by { display:flex; align-items:center; gap:12px; margin-top:20px; }
+.avatar { width:44px; height:44px; border-radius:50%; display:grid; place-items:center; font-weight:700; font-size:.95rem; color:#fff; flex-shrink:0; }
+.quote-by b { display:block; font-size:.9rem; }
+.quote-by span { font-size:.8rem; color: var(--text3); }
+
+/* ---------- BLOG CARD ---------- */
+.blog-card { padding:0; overflow:hidden; display:flex; flex-direction:column; }
+.blog-thumb { aspect-ratio: 16/9; display:grid; place-items:center; position:relative; overflow:hidden; }
+.blog-thumb svg { width:54px; height:54px; opacity:.85; }
+.blog-body { padding: 20px 22px 24px; display:flex; flex-direction:column; flex:1; }
+.blog-card h3 { font-size:1.08rem; margin:10px 0; line-height:1.3; }
+.blog-meta { display:flex; gap:12px; font-size:.78rem; color: var(--text3); margin-top:auto; }
+
+/* ---------- FAQ ---------- */
+.faq-grid { display:grid; grid-template-columns:1fr 1fr; gap: 14px 36px; align-items:start; }
+@media (max-width:820px){ .faq-grid { grid-template-columns:1fr; } }
+.faq { border-bottom:1px solid var(--border); }
+.faq-q { width:100%; text-align:left; display:flex; justify-content:space-between; align-items:center; gap:16px; padding: 20px 4px; font-size:1.02rem; font-weight:600; color: var(--text); }
+.faq-icon { position:relative; width:20px; height:20px; flex-shrink:0; }
+.faq-icon::before, .faq-icon::after { content:""; position:absolute; background: var(--purple); border-radius:2px; transition: transform .25s var(--ease); }
+.faq-icon::before { top:9px; left:0; width:20px; height:2px; }
+.faq-icon::after { left:9px; top:0; width:2px; height:20px; }
+.faq.open .faq-icon::after { transform: rotate(90deg); opacity:0; }
+.faq-a { max-height:0; overflow:hidden; transition: max-height .3s var(--ease); }
+.faq-a p { padding: 0 4px 22px; font-size:.94rem; line-height:1.6; margin:0; }
+
+/* ---------- CTA BAND ---------- */
+.cta-band { position:relative; overflow:hidden; background: linear-gradient(130deg, var(--purple) 0%, var(--purple-dk) 100%); border-radius: var(--radius-lg); padding: 64px 48px; text-align:center; color:#fff; }
+[data-theme="dark"] .cta-band { background: linear-gradient(130deg, #0E3D2B 0%, #061F15 100%); }
+.cta-band h2 { color:#fff; }
+.cta-band p { color: rgba(255,255,255,.82); max-width:560px; margin: 14px auto 0; }
+.cta-actions { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top: 30px; }
+.cta-fine { font-size:.82rem; color: rgba(255,255,255,.6); margin-top:18px; }
+.cta-deco { position:absolute; border-radius:50%; border:1px solid rgba(255,255,255,.14); }
+.cta-deco.d1 { width:300px; height:300px; top:-120px; right:-60px; }
+.cta-deco.d2 { width:200px; height:200px; bottom:-100px; left:40px; }
+@media (max-width:640px){ .cta-band { padding: 48px 24px; } }
+
+/* ---------- TABLE ---------- */
+.tbl-wrap { overflow-x:auto; border:1px solid var(--border); border-radius: var(--radius-md); }
+table.data { width:100%; border-collapse:collapse; font-size:.9rem; }
+table.data thead th { background: var(--purple-lt); color: var(--purple-dk); font-size:.78rem; text-transform:uppercase; letter-spacing:.05em; font-weight:700; text-align:left; padding:14px 16px; white-space:nowrap; }
+table.data tbody td { padding:13px 16px; border-top:1px solid var(--border); color: var(--text2); vertical-align:top; }
+table.data tbody td:first-child { font-weight:600; color: var(--text); }
+table.data tbody tr:nth-child(even) { background: var(--surface2); }
+
+/* ---------- PRICING ---------- */
+.price-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:22px; align-items:stretch; }
+@media (max-width:900px){ .price-grid { grid-template-columns:1fr; max-width:420px; margin:0 auto; } }
+.price-card { display:flex; flex-direction:column; position:relative; }
+.price-card.featured { border-color: var(--purple); box-shadow: var(--shadow-lg); }
+.price-card.featured::before { content:"Most Popular"; position:absolute; top:-12px; left:50%; transform:translateX(-50%); background: var(--purple); color:#fff; font-size:.7rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; padding:5px 14px; border-radius: var(--radius-full); }
+.price-name { font-size:1.05rem; font-weight:700; }
+.price-amt { font-size:2.4rem; font-weight:900; letter-spacing:-.03em; margin:10px 0 4px; }
+.price-amt span { font-size:.95rem; font-weight:500; color: var(--text3); }
+.price-feats { list-style:none; margin:22px 0; display:flex; flex-direction:column; gap:11px; }
+.price-feats li { display:flex; gap:10px; font-size:.9rem; color: var(--text2); align-items:flex-start; }
+.price-feats svg { width:18px; height:18px; color: var(--teal); flex-shrink:0; margin-top:1px; }
+
+.toggle-wrap { display:inline-flex; align-items:center; gap:14px; background: var(--surface2); border:1px solid var(--border); border-radius: var(--radius-full); padding:6px; }
+.toggle-wrap button { padding:9px 20px; border-radius: var(--radius-full); font-size:.88rem; font-weight:600; color: var(--text2); transition: all .2s var(--ease); }
+.toggle-wrap button.active { background: var(--surface); color: var(--text); box-shadow: var(--shadow-sm); }
+.save-badge { background: var(--teal-lt); color: var(--teal); font-size:.72rem; font-weight:700; padding:3px 9px; border-radius: var(--radius-full); }
+
+/* ---------- CALLOUT ---------- */
+.callout { border-radius: var(--radius-md); padding: 18px 20px; border-left:3px solid var(--purple); background: var(--purple-lt); font-size:.92rem; }
+.callout strong { display:block; margin-bottom:5px; color: var(--text); }
+.callout.teal { border-color: var(--teal); background: var(--teal-lt); }
+.callout.amber { border-color: var(--amber); background: var(--amber-lt); }
+
+/* ---------- FOOTER ---------- */
+.footer { background: var(--dark-band); color: #B7B5AC; padding: 72px 0 30px; }
+.footer-grid { display:grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 40px; }
+@media (max-width:900px){ .footer-grid { grid-template-columns:1fr 1fr; gap:32px; } }
+@media (max-width:560px){ .footer-grid { grid-template-columns:1fr; } }
+.footer .logo { color:#fff; margin-bottom:14px; }
+.footer p { font-size:.88rem; color:#8A887F; max-width:280px; }
+.footer h4 { color:#fff; font-size:.82rem; text-transform:uppercase; letter-spacing:.08em; margin-bottom:16px; font-weight:700; }
+.footer-links { display:flex; flex-direction:column; gap:11px; }
+.footer-links a { font-size:.9rem; color:#B7B5AC; transition: color .2s var(--ease); width:fit-content; }
+.footer-links a:hover { color:#fff; }
+.socials { display:flex; gap:10px; margin-top:18px; }
+.socials a { width:38px; height:38px; border-radius:10px; border:1px solid rgba(255,255,255,.12); display:grid; place-items:center; color:#B7B5AC; transition: all .2s var(--ease); }
+.socials a:hover { background:#fff; color: var(--dark-band); }
+.socials svg { width:18px; height:18px; }
+.footer-bottom { margin-top:48px; padding-top:24px; border-top:1px solid rgba(255,255,255,.1); display:flex; flex-wrap:wrap; justify-content:space-between; gap:14px; font-size:.82rem; color:#8A887F; }
+.footer-bottom a { color:#8A887F; }
+.footer-bottom a:hover { color:#fff; }
+
+/* ---------- PAGE HERO (inner pages) ---------- */
+.page-hero { padding: calc(var(--nav-h) + 64px) 0 56px; text-align:center; position:relative; overflow:hidden; }
+.page-hero .container { position:relative; z-index:1; }
+.page-hero h1 { margin: 16px auto 16px; max-width: 760px; }
+.page-hero .lead { max-width: 620px; margin: 0 auto; }
+.breadcrumb { display:inline-flex; gap:8px; font-size:.82rem; color: var(--text3); margin-bottom:6px; }
+.breadcrumb a:hover { color: var(--purple); }
+
+/* ---------- MODAL ---------- */
+.modal-overlay { position:fixed; inset:0; z-index:1200; background: rgba(14,14,12,.6); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); display:grid; place-items:center; padding:24px; opacity:0; visibility:hidden; transition: opacity .25s var(--ease), visibility .25s; }
+.modal-overlay.open { opacity:1; visibility:visible; }
+.modal { background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); width: min(560px,100%); padding: 32px; transform: scale(.95) translateY(10px); transition: transform .25s var(--ease); max-height: 90vh; overflow-y:auto; }
+.modal-overlay.open .modal { transform: none; }
+.modal-close { position:absolute; top:18px; right:18px; width:38px; height:38px; border-radius:10px; display:grid; place-items:center; color: var(--text2); border:1px solid var(--border); }
+
+/* ---------- FORMS ---------- */
+.field { margin-bottom:16px; }
+.field label { display:block; font-size:.85rem; font-weight:600; margin-bottom:6px; }
+.field input, .field select, .field textarea {
+  width:100%; height:48px; border-radius: var(--radius-sm); border:1.5px solid var(--border2);
+  background: var(--surface); color: var(--text); padding:0 14px; font-size:.95rem; font-family:inherit; outline:none;
+  transition: border-color .15s var(--ease), box-shadow .15s var(--ease);
+}
+.field textarea { height:auto; padding:12px 14px; min-height:120px; resize:vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--purple); box-shadow: var(--shadow-glow); }
+
+/* ---------- SCROLL REVEAL ---------- */
+.reveal { opacity:0; transform: translateY(26px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
+.reveal.in { opacity:1; transform:none; }
+.reveal.d1{ transition-delay:.08s;} .reveal.d2{ transition-delay:.16s;} .reveal.d3{ transition-delay:.24s;} .reveal.d4{ transition-delay:.32s;}
+
+/* ---------- FLOATING WHATSAPP ---------- */
+.wa-float {
+  position: fixed; right: 22px; bottom: 22px; z-index: 1150;
+  display: flex; align-items: center; gap: 0;
+  height: 58px; width: 58px; padding: 0;
+  background: #25D366; color: #fff; border-radius: var(--radius-full);
+  box-shadow: 0 10px 28px -6px rgba(37,211,102,.6), 0 4px 12px rgba(0,0,0,.18);
+  overflow: hidden; white-space: nowrap;
+  transition: width .28s var(--ease), padding .28s var(--ease), transform .15s var(--ease);
+}
+.wa-float svg { width: 30px; height: 30px; flex-shrink: 0; margin: 0 14px; }
+.wa-tip { font-size: .92rem; font-weight: 600; opacity: 0; transition: opacity .2s var(--ease); }
+.wa-float:hover { width: 186px; padding-right: 18px; transform: translateY(-2px); }
+.wa-float:hover .wa-tip { opacity: 1; }
+@media (max-width: 560px){ .wa-float:hover { width: 58px; padding-right: 0; } .wa-float:hover .wa-tip { opacity: 0; } }
+
+/* utilities */
+.mt-0{margin-top:0;} .mt-1{margin-top:8px;} .mt-2{margin-top:16px;} .mt-3{margin-top:24px;} .mt-4{margin-top:40px;}
+.mb-2{margin-bottom:16px;} .mb-3{margin-bottom:24px;}
+.tc{ text-align:center; } .fw{ width:100%; }
+.flex{ display:flex; } .between{ justify-content:space-between; } .ac{ align-items:center; } .gap{ gap:14px; } .wrap{ flex-wrap:wrap; }
+
+/* ============================================================
+   PREMIUM FX  (Awwwards-level motion & interaction)
+   ============================================================ */
+body::after{
+  content:""; position:fixed; inset:0; z-index:9998; pointer-events:none; opacity:.04; mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+[data-theme="dark"] body::after{ mix-blend-mode:screen; opacity:.06; }
+
+.scroll-progress{ position:fixed; top:0; left:0; height:3px; width:0; z-index:1300; background:linear-gradient(90deg,var(--purple),var(--amber)); box-shadow:0 0 14px rgba(207,154,18,.55); }
+
+.cursor-dot,.cursor-ring{ position:fixed; top:0; left:0; border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); }
+.cursor-dot{ width:6px; height:6px; background:var(--amber); }
+.cursor-ring{ width:36px; height:36px; border:1.5px solid var(--purple); opacity:.55;
+  transition:width .25s var(--ease), height .25s var(--ease), background .25s var(--ease), border-color .25s var(--ease), opacity .25s var(--ease); }
+.cursor-ring.is-hover{ width:62px; height:62px; border-color:var(--amber); background:color-mix(in srgb,var(--amber) 16%,transparent); opacity:.9; }
+.cursor-ring.is-down{ width:28px; height:28px; }
+body.fx-cursor, body.fx-cursor a, body.fx-cursor button, body.fx-cursor .faq-q, body.fx-cursor input, body.fx-cursor select, body.fx-cursor textarea { cursor:none; }
+
+.btn{ position:relative; overflow:hidden; }
+.btn-primary::after,.btn-white::after{ content:""; position:absolute; inset:0; background:linear-gradient(120deg,transparent 32%,rgba(255,255,255,.4) 50%,transparent 68%); transform:translateX(-130%); transition:transform .7s var(--ease); pointer-events:none; }
+.btn-primary:hover::after,.btn-white:hover::after{ transform:translateX(130%); }
+
+.card-hover{ transform-style:preserve-3d; will-change:transform; }
+.card-hover::before{ content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none; opacity:0; transition:opacity .35s var(--ease);
+  background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%), color-mix(in srgb,var(--amber) 14%,transparent), transparent 45%); }
+.card-hover:hover::before{ opacity:1; }
+
+.grad{ background-size:220% auto; animation:shimmer 7s linear infinite; }
+@keyframes shimmer{ to{ background-position:220% center; } }
+
+.hero .hero-bg::before{ content:""; position:absolute; inset:-30%; z-index:-1;
+  background:conic-gradient(from 0deg at 50% 50%, transparent 0deg, color-mix(in srgb,var(--purple) 14%,transparent) 90deg, transparent 180deg, color-mix(in srgb,var(--amber) 12%,transparent) 270deg, transparent 360deg);
+  filter:blur(40px); animation:spinMesh 32s linear infinite; }
+@keyframes spinMesh{ to{ transform:rotate(360deg); } }
+.hero-blob{ animation:floatBlob 20s ease-in-out infinite alternate; }
+.hero-blob.b2{ animation-duration:26s; animation-direction:alternate-reverse; }
+@keyframes floatBlob{ from{ transform:translate(0,0) scale(1); } to{ transform:translate(36px,-26px) scale(1.12); } }
+
+.reveal{ transition:opacity .6s var(--ease), transform .6s var(--ease), filter .6s var(--ease); filter:blur(8px); }
+.reveal.in{ filter:blur(0); }
+
+.marquee{ overflow:hidden; background:var(--purple-dk); border-top:1px solid color-mix(in srgb,#fff 8%,transparent); border-bottom:1px solid color-mix(in srgb,#fff 8%,transparent); }
+[data-theme="dark"] .marquee{ background:#0A2418; }
+.marquee-track{ display:inline-flex; white-space:nowrap; animation:marquee 30s linear infinite; }
+.marquee:hover .marquee-track{ animation-play-state:paused; }
+.marquee-item{ display:inline-flex; align-items:center; padding:13px 0; color:#EAF3EE; font-weight:600; font-size:.9rem; letter-spacing:.02em; }
+[data-theme="dark"] .marquee-item{ color:#CFE6D8; }
+.marquee-item::after{ content:"\2726"; color:var(--amber); margin:0 28px; font-size:.8rem; }
+@keyframes marquee{ to{ transform:translateX(-50%); } }
+
+.nav-link::after{ content:""; position:absolute; left:13px; right:13px; bottom:2px; height:2px; background:var(--purple); border-radius:2px; transform:scaleX(0); transform-origin:left; transition:transform .25s var(--ease); }
+.nav-link:hover::after{ transform:scaleX(1); }
+.nav-link.active::after{ transform:scaleX(1); }
+
+.intro-curtain{ position:fixed; inset:0; z-index:2000; background:var(--purple-dk); display:grid; place-items:center; transition:transform .8s cubic-bezier(.76,0,.24,1); }
+.intro-curtain.done{ transform:translateY(-101%); }
+.intro-curtain .il{ font-size:clamp(2rem,7vw,4rem); font-weight:900; letter-spacing:-.03em; color:#fff; opacity:0; transform:translateY(18px); animation:ilIn .7s var(--ease) .1s forwards; }
+.intro-curtain .il span{ color:var(--amber); }
+@keyframes ilIn{ to{ opacity:1; transform:none; } }
+
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after { animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important; }
+  .reveal { opacity:1; transform:none; filter:none; }
+  body::after, .scroll-progress, .cursor-dot, .cursor-ring, .intro-curtain { display:none !important; }
+}
+
+/* ---------- SHARED PRICING CARDS (pp-) — single source for Pricing + SMM ---------- */
+.pp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch;max-width:1080px;margin:0 auto}
+@media(max-width:920px){.pp-grid{grid-template-columns:1fr;max-width:440px;gap:30px}}
+.pp-card{position:relative;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:34px 28px 30px;box-shadow:var(--shadow-md);transition:transform .32s var(--ease),box-shadow .32s var(--ease),border-color .32s var(--ease);overflow:hidden}
+.pp-card::before{content:"";position:absolute;left:0;right:0;top:0;height:200px;background:radial-gradient(460px circle at 50% -40%,var(--c-lt,var(--purple-lt)),transparent 70%);opacity:.7;pointer-events:none}
+.pp-card>*{position:relative}
+.pp-card:hover{transform:translateY(-10px);box-shadow:var(--shadow-lg);border-color:var(--c,var(--purple))}
+.pp-card.popular{border-color:var(--purple);box-shadow:var(--shadow-lg)}
+@media(min-width:921px){.pp-card.popular{transform:translateY(-12px) scale(1.02)}.pp-card.popular:hover{transform:translateY(-20px) scale(1.02)}}
+.pp-badge{position:absolute;top:20px;right:20px;font-size:.66rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:7px 13px;border-radius:var(--radius-full);color:#fff;background:linear-gradient(120deg,var(--purple),var(--amber));box-shadow:0 6px 16px -4px rgba(21,105,74,.5);z-index:2}
+.pp-badge.roi{background:linear-gradient(120deg,var(--coral),var(--amber));box-shadow:0 6px 16px -4px rgba(181,97,47,.5)}
+.pp-ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:23px;background:var(--c-lt,var(--purple-lt));color:var(--c,var(--purple));margin-bottom:16px}
+.pp-name{font-size:1.2rem;font-weight:800;letter-spacing:-.01em}
+.pp-tag{font-size:.86rem;color:var(--text3);margin-top:2px}
+.pp-price{display:flex;align-items:baseline;gap:5px;margin:18px 0 4px}
+.pp-price b{font-size:2.7rem;font-weight:900;letter-spacing:-.03em;color:var(--text);line-height:1}
+.pp-price span{color:var(--text3);font-size:.92rem;font-weight:500}
+.pp-sub{font-size:.82rem;color:var(--text3)}
+.pp-feats{list-style:none;display:flex;flex-direction:column;gap:12px;margin:22px 0;border-top:1px solid var(--border);padding-top:22px}
+.pp-feats li{display:flex;gap:11px;align-items:flex-start;font-size:.92rem;color:var(--text2)}
+.pp-feats li b{color:var(--text);font-weight:700}
+.pp-feats .ck{width:20px;height:20px;flex-shrink:0;border-radius:50%;display:grid;place-items:center;background:var(--c-lt,var(--purple-lt));margin-top:1px}
+.pp-feats .ck svg{width:12px;height:12px;color:var(--c,var(--purple));stroke-width:3}
+.pp-cta{margin-top:auto;display:flex;flex-direction:column;gap:10px}
+.pp-cta .btn{width:100%;justify-content:center}
+.pp-cta .wa{background:#25D366;color:#fff;border-color:transparent;box-shadow:0 8px 20px -6px rgba(37,211,102,.45)}
+.pp-cta .wa:hover{background:#1ebe5a}
+.pp-compare-link{display:block;text-align:center;margin-top:14px;font-size:.8rem;font-weight:600;color:var(--text3)}
+.pp-compare-link:hover{color:var(--purple)}
+.pp-includes{max-width:1080px;margin:34px auto 0;display:flex;flex-wrap:wrap;justify-content:center;gap:14px 28px;padding:22px;border:1px dashed var(--border2);border-radius:var(--radius-lg);background:var(--surface2)}
+.pp-includes span{display:inline-flex;align-items:center;gap:9px;font-size:.86rem;font-weight:600;color:var(--text2)}
+.pp-includes span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--teal)}
+
+/* ====================== BRAND MARK (official logo, themeable) ====================== */
+.brand-mark{width:32px;height:32px;flex-shrink:0;display:inline-block;background:linear-gradient(135deg,var(--purple),var(--amber));-webkit-mask:url(assets/img/logo-mark.png) center/contain no-repeat;mask:url(assets/img/logo-mark.png) center/contain no-repeat}
+[data-theme="dark"] .nav .brand-mark,[data-theme="dark"] .mobile-menu .brand-mark{background:#fff}
+.footer .brand-mark{background:#fff}
+.intro-mark{width:clamp(58px,11vw,104px);height:clamp(58px,11vw,104px);display:block;margin:0 auto 16px;background:#fff;-webkit-mask:url(assets/img/logo-mark.png) center/contain no-repeat;mask:url(assets/img/logo-mark.png) center/contain no-repeat}
+.intro-curtain{flex-direction:column}
+
+/* ====================== PORTFOLIO ====================== */
+.pf-tabs{display:inline-flex;gap:6px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-full);padding:6px;margin:0 auto 32px}
+.pf-tab{padding:10px 22px;border-radius:var(--radius-full);font-weight:600;font-size:.92rem;color:var(--text2);transition:all .2s var(--ease)}
+.pf-tab.active{background:var(--surface);color:var(--text);box-shadow:var(--shadow-sm)}
+.pf-panel{display:none}.pf-panel.active{display:block;animation:pfIn .5s var(--ease)}
+@keyframes pfIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+/* website cards (glassmorphism) */
+.web-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:980px){.web-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.web-grid{grid-template-columns:1fr}}
+.web-card{display:flex;flex-direction:column;border-radius:var(--radius-lg);overflow:hidden;background:color-mix(in srgb,var(--surface) 80%,transparent);border:1px solid var(--border);box-shadow:var(--shadow-md);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease)}
+.web-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);border-color:var(--c,var(--purple))}
+.web-prev{position:relative;aspect-ratio:16/10;overflow:hidden;display:block;background:linear-gradient(140deg,var(--c,var(--purple)),var(--purple-dk))}
+.web-prev img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .5s var(--ease)}
+.web-card:hover .web-prev img{transform:scale(1.05)}
+.web-chrome{position:absolute;top:0;left:0;right:0;height:32px;background:rgba(255,255,255,.16);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);display:flex;align-items:center;gap:6px;padding:0 12px;z-index:2}
+.web-chrome i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.55)}
+.web-chrome .url{margin-left:8px;font-size:.68rem;color:rgba(255,255,255,.9);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.web-mock{position:absolute;inset:32px 0 0;display:flex;flex-direction:column;justify-content:center;padding:0 24px;color:#fff}
+.web-mock h4{color:#fff;font-size:1.45rem;letter-spacing:-.02em;line-height:1.1}
+.web-mock p{color:rgba(255,255,255,.82);font-size:.84rem;margin-top:6px}
+.web-mock .tagpill{margin-top:13px;align-self:flex-start;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:rgba(255,255,255,.2);padding:5px 11px;border-radius:var(--radius-full)}
+.web-body{padding:20px 22px;display:flex;flex-direction:column;flex:1}
+.web-body h3{font-size:1.1rem}
+.web-body .desc{font-size:.87rem;color:var(--text2);margin:6px 0 12px;line-height:1.5}
+.web-serv{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.web-serv span{font-size:.69rem;font-weight:600;color:var(--c,var(--purple));background:var(--c-lt,var(--purple-lt));padding:4px 9px;border-radius:var(--radius-full)}
+.web-actions{margin-top:auto;display:flex;gap:10px}
+.web-actions .btn{flex:1;justify-content:center}
+/* social masonry */
+.soc-grid{columns:4;column-gap:16px}
+@media(max-width:980px){.soc-grid{columns:3}}
+@media(max-width:680px){.soc-grid{columns:2}}
+.soc-item{break-inside:avoid;margin-bottom:16px;position:relative;border-radius:var(--radius-md);overflow:hidden;cursor:pointer;background:var(--surface2);box-shadow:var(--shadow-sm)}
+.soc-item .ph{display:block;width:100%;aspect-ratio:4/5;background:linear-gradient(110deg,var(--surface2) 25%,var(--surface) 50%,var(--surface2) 75%);background-size:200% 100%;animation:shimmerbg 1.4s linear infinite}
+@keyframes shimmerbg{to{background-position:-200% 0}}
+.soc-item img{width:100%;display:block;opacity:0;transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.soc-item img.loaded{opacity:1;position:relative}
+.soc-item img.loaded + .ph,.soc-item .ph.hide{display:none}
+.soc-item:hover img.loaded{transform:scale(1.06)}
+.soc-over{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,42,30,.85),transparent 55%);opacity:0;transition:opacity .3s var(--ease);display:flex;flex-direction:column;justify-content:flex-end;padding:14px;z-index:2}
+.soc-item:hover .soc-over{opacity:1}
+.soc-badge{position:absolute;top:10px;left:10px;z-index:3;display:inline-flex;align-items:center;gap:5px;font-size:.66rem;font-weight:700;color:#fff;background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);padding:5px 9px;border-radius:var(--radius-full)}
+.soc-badge svg{width:12px;height:12px}
+.soc-over .cat{color:#fff;font-weight:700;font-size:.9rem}
+.soc-over .ind{color:rgba(255,255,255,.82);font-size:.77rem}
+.soc-view{margin-top:8px;font-size:.73rem;font-weight:700;color:var(--amber)}
+/* lightbox */
+.lbox{position:fixed;inset:0;z-index:1400;background:rgba(7,15,11,.93);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:30px}
+.lbox.open{display:flex}
+.lbox img{max-width:min(92vw,540px);max-height:86vh;border-radius:var(--radius-md);box-shadow:var(--shadow-lg)}
+.lbox-close,.lbox-nav{position:absolute;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:#fff;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;transition:background .2s var(--ease)}
+.lbox-close svg,.lbox-nav svg{width:22px;height:22px}
+.lbox-close:hover,.lbox-nav:hover{background:rgba(255,255,255,.26)}
+.lbox-close{top:20px;right:22px}
+.lbox-nav.prev{left:22px;top:50%;transform:translateY(-50%)}
+.lbox-nav.next{right:22px;top:50%;transform:translateY(-50%)}
+.lbox-meta{position:absolute;bottom:20px;left:0;right:0;text-align:center;color:#fff;font-size:.85rem}
+.lbox-meta b{color:var(--amber)}
+@media(max-width:560px){.lbox-nav{width:42px;height:42px}.lbox-nav.prev{left:8px}.lbox-nav.next{right:8px}}
+/* project page gallery */
+.proj-gallery{columns:3;column-gap:14px}
+@media(max-width:760px){.proj-gallery{columns:2}}
+.proj-gallery img{width:100%;margin-bottom:14px;border-radius:var(--radius-md);cursor:pointer;break-inside:avoid;box-shadow:var(--shadow-sm)}
+
+/* ====================== BRAND LOGO IMG (with fallback) ====================== */
+.brand-img{width:34px;height:34px;object-fit:contain;display:block;flex-shrink:0}
+[data-theme="dark"] .nav .brand-img,[data-theme="dark"] .mobile-menu .brand-img,.footer .brand-img{filter:brightness(0) invert(1)}
+.brand-fallback{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--purple),var(--amber));color:#fff;font-weight:900;font-size:.82rem;display:grid;place-items:center;letter-spacing:-.03em;flex-shrink:0}
+.footer .brand-fallback{color:#fff}
+.intro-img{width:clamp(58px,11vw,100px);height:clamp(58px,11vw,100px);object-fit:contain;display:block;margin:0 auto 16px}
+.intro-fallback{width:clamp(58px,11vw,100px);height:clamp(58px,11vw,100px);border-radius:18px;background:rgba(255,255,255,.14);border:2px solid rgba(255,255,255,.4);color:#fff;font-weight:900;font-size:2rem;display:grid;place-items:center;margin:0 auto 16px;letter-spacing:-.04em}
+
+/* website card real-screenshot overlay (fallback = mockup beneath) */
+.web-shot{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;z-index:1}
+.web-prev:hover .web-shot{transform:scale(1.05)}
+
+/* new colored logo: show its true green on all backgrounds */
+.footer .brand-img,[data-theme="dark"] .nav .brand-img,[data-theme="dark"] .mobile-menu .brand-img{filter:none}
+/* loading screen: text only, perfectly centered */
+.intro-curtain{display:grid;place-items:center;text-align:center}
+.intro-curtain .il{margin:0}
+
+/* logo1 is dark green — whiten it on dark backgrounds for contrast */
+.footer .brand-img,[data-theme="dark"] .nav .brand-img,[data-theme="dark"] .mobile-menu .brand-img{filter:brightness(0) invert(1)}
+
+/* ============ SOCIAL MARQUEE (two-row infinite showcase) ============ */
+.soc-mq{display:flex;flex-direction:column;gap:16px}
+.soc-row{overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.soc-track{display:flex;gap:16px;width:max-content;will-change:transform}
+.soc-row-rtl .soc-track{animation:mqLeft 48s linear infinite}
+.soc-row-ltr .soc-track{animation:mqRight 48s linear infinite}
+.soc-row:hover .soc-track,.soc-row:focus-within .soc-track{animation-play-state:paused}
+@keyframes mqLeft{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+@keyframes mqRight{from{transform:translate3d(-50%,0,0)}to{transform:translate3d(0,0,0)}}
+.mq-card{position:relative;flex:0 0 auto;height:248px;aspect-ratio:4/5;border-radius:var(--radius-md);overflow:hidden;cursor:pointer;background:var(--surface2);border:1px solid var(--border);box-shadow:var(--shadow-md);transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease)}
+.mq-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s var(--ease)}
+.mq-card:hover{transform:translateY(-4px);border-color:var(--purple)}
+.mq-card:hover img{transform:scale(1.07)}
+.mq-card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;box-shadow:0 0 0 0 rgba(67,194,140,0);transition:box-shadow .3s var(--ease)}
+.mq-card:hover::after{box-shadow:0 0 24px 2px color-mix(in srgb,var(--purple) 55%,transparent), inset 0 0 0 1px color-mix(in srgb,var(--amber) 55%,transparent)}
+.mq-over{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:12px;background:linear-gradient(to top,rgba(11,42,30,.86),transparent 55%);opacity:0;transition:opacity .3s var(--ease);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+.mq-card:hover .mq-over{opacity:1}
+.mq-over .cat{color:#fff;font-weight:700;font-size:.85rem}
+.mq-over .ind{color:rgba(255,255,255,.82);font-size:.74rem}
+@media(max-width:980px){.mq-card{height:200px}.soc-row-rtl .soc-track,.soc-row-ltr .soc-track{animation-duration:60s}}
+@media(max-width:600px){.mq-card{height:168px}.soc-mq{gap:12px}.soc-track{gap:12px}}
+@media(prefers-reduced-motion:reduce){.soc-row-rtl .soc-track,.soc-row-ltr .soc-track{animation:none;transform:none}.soc-row{overflow-x:auto}}
+
+/* 4-row marquee responsive: desktop 4 rows, tablet 3, mobile 2 (alternating preserved) */
+@media(max-width:980px){.soc-mq .soc-row:nth-child(4){display:none}}
+@media(max-width:600px){.soc-mq .soc-row:nth-child(3){display:none}}
+
+</style>
+<script>(function(){try{var t=localStorage.getItem('digitaldigix-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://businessvolunteers.online/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://businessvolunteers.online/services"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Advertising & Performance", "url": "https://businessvolunteers.online/services#advertising-performance"}, {"@type": "ListItem", "position": 2, "name": "Social & Creative", "url": "https://businessvolunteers.online/services#social-creative"}, {"@type": "ListItem", "position": 3, "name": "Graphic Design & Branding", "url": "https://businessvolunteers.online/services#graphic-branding"}, {"@type": "ListItem", "position": 4, "name": "Web & Development", "url": "https://businessvolunteers.online/services#web-development"}, {"@type": "ListItem", "position": 5, "name": "Video Production", "url": "https://businessvolunteers.online/services#video-production"}, {"@type": "ListItem", "position": 6, "name": "Business Growth Solutions", "url": "https://businessvolunteers.online/services#business-growth"}, {"@type": "ListItem", "position": 7, "name": "Local Business Services", "url": "https://businessvolunteers.online/services#local-business"}, {"@type": "ListItem", "position": 8, "name": "Office & Business Documents", "url": "https://businessvolunteers.online/services#office-documents"}]}
+</script>
+<style>
+.cat-nav{position:sticky;top:var(--nav-h);z-index:60;background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:saturate(180%) blur(12px);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--border)}
+.cat-nav-inner{display:flex;gap:8px;overflow-x:auto;padding:12px 24px;max-width:var(--max-width);margin:0 auto;scrollbar-width:none}
+.cat-nav-inner::-webkit-scrollbar{display:none}
+.cat-chip{white-space:nowrap;font-size:.82rem;font-weight:600;padding:8px 14px;border-radius:var(--radius-full);border:1px solid var(--border2);color:var(--text2);background:var(--surface);transition:all .15s var(--ease)}
+.cat-chip:hover{border-color:var(--purple);color:var(--purple)}
+.svc-cat{padding:44px 0 8px;scroll-margin-top:140px}
+.svc-cat-head{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.svc-cat-ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:24px;background:var(--c-lt,var(--purple-lt));color:var(--c,var(--purple));flex-shrink:0}
+.svc-cat-head h2{font-size:1.5rem}
+.svc-cat-head .eyebrow{font-size:.68rem}
+/* ---- whole service card clickable (stretched link, no nested links) ---- */
+.svc-card{position:relative;cursor:pointer}
+.svc-card .svc-arrow::after{content:"";position:absolute;inset:0;z-index:1;border-radius:var(--radius-md)}
+.svc-card .svc-arrow:focus{outline:none}
+.svc-card:focus-within{outline:2px solid var(--purple);outline-offset:3px}
+.svc-card:focus-within .svc-arrow{gap:9px;color:var(--c,var(--purple))}
+@media (hover:hover){.svc-card:hover .svc-arrow{gap:9px;color:var(--c,var(--purple))}}
+</style>
+</head>
+<body data-page="services">
+
+<section class="page-hero" style="padding-bottom:18px">
+  <div class="hero-bg"><div class="hero-blob b1"></div><div class="hero-blob b2"></div></div>
+  <div class="container">
+    <div class="breadcrumb reveal"><a href="index.html">Home</a> / <span>Services</span></div>
+    <span class="chip reveal">8 categories &middot; 73+ services</span>
+    <h1 class="reveal d1">Our All <span class="grad">Services & Pricing</span></h1>
+    <p class="lead reveal d2">360&deg; digital solutions to grow your brand, generate leads and scale your business. Transparent pricing, no lock-in, post-pay available.</p>
+  </div>
+</section>
+
+<nav class="cat-nav"><div class="cat-nav-inner"><a class="cat-chip" href="#advertising-performance">🚀 Advertising &amp; Performance</a><a class="cat-chip" href="#social-creative">📱 Social &amp; Creative</a><a class="cat-chip" href="#graphic-branding">🎨 Graphic Design &amp; Branding</a><a class="cat-chip" href="#web-development">💻 Web &amp; Development</a><a class="cat-chip" href="#video-production">🎬 Video Production</a><a class="cat-chip" href="#business-growth">📈 Business Growth Solutions</a><a class="cat-chip" href="#local-business">⭐ Local Business Services</a><a class="cat-chip" href="#office-documents">📄 Office &amp; Business Documents</a></div></nav>
+
+<section id="advertising-performance" class="svc-cat"><div class="container"><div class="svc-cat-head reveal"><span class="svc-cat-ic c-coral">🚀</span><div><span class="eyebrow">9 services</span><h2 class="mt-1">Advertising &amp; Performance</h2></div></div><div class="grid g4"><div class="card card-hover card-top svc-card c-coral reveal"><div class="icon-circle" style="font-size:20px">🔍</div><h3 style="font-size:1rem">SEO Services</h3><p style="font-size:.85rem">Rank at the top of Google and get organic leads 24/7.</p><div class="svc-foot"><span class="svc-price">₹4,000–₹12,000/mo</span><a class="svc-arrow" href="service-seo.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-coral reveal"><div class="icon-circle" style="font-size:20px">🎯</div><h3 style="font-size:1rem">Google Ads Management</h3><p style="font-size:.85rem">Capture high-intent customers the moment they search.</p><div class="svc-foot"><span class="svc-price">18% of ad spend (Min ₹2,000)</span><a class="svc-arrow" href="service-google-ads.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-coral reveal"><div class="icon-circle" style="font-size:20px">📣</div><h3 style="font-size:1rem">Meta Ads Management</h3><p style="font-size:.85rem">Facebook &amp; Instagram campaigns engineered for real leads.</p><div class="svc-foot"><span class="svc-price">15% of ad spend (Min ₹1,500)</span><a class="svc-arrow" href="service-meta-ads.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-coral reveal"><div class="icon-circle" style="font-size:20px">📍</div><h3 style="font-size:1rem">Google Business Profile Setup</h3><p style="font-size:.85rem">Get discovered locally and build trust instantly.</p><div class="svc-foot"><span class="svc-price">₹999</span><a class="svc-arrow" href="service-local-seo.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-coral reveal"><div class="icon-circle" style="font-size:20px">📈</div><h3 style="font-size:1rem">Google Business Optimization</h3><p style="font-size:.85rem">Improve ranking, visibility and customer trust.</p><div class="svc-foot"><span class="svc-price">₹1,999–₹4,999</span><a class="svc-arrow" href="service-local-seo.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-coral reveal"><div class="icon-circle" style="font-size:20px">🧲</div><h3 style="font-size:1rem">Lead Generation Campaigns</h3><p style="font-size:.85rem">High-quality leads tailored for your business.</p><div class="svc-foot"><span class="svc-price">₹7,999/mo</span><a class="svc-arrow" href="service-meta-ads.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-coral reveal"><div class="icon-circle" style="font-size:20px">💬</div><h3 style="font-size:1rem">WhatsApp Marketing</h3><p style="font-size:.85rem">Targeted WhatsApp campaigns that convert.</p><div class="svc-foot"><span class="svc-price">₹999/campaign</span><a class="svc-arrow" href="service-social-media-marketing.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-coral reveal"><div class="icon-circle" style="font-size:20px">✉️</div><h3 style="font-size:1rem">Email Marketing</h3><p style="font-size:.85rem">Nurture leads and boost customer retention with email.</p><div class="svc-foot"><span class="svc-price">₹999–₹4,999</span><a class="svc-arrow" href="service-social-media-marketing.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-coral reveal"><div class="icon-circle" style="font-size:20px">⚙️</div><h3 style="font-size:1rem">Marketing Automation</h3><p style="font-size:.85rem">Automate follow-ups, workflows and save time.</p><div class="svc-foot"><span class="svc-price">₹5,000 onwards</span><a class="svc-arrow" href="service-business-consultation.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></div></div></section><section id="social-creative" class="svc-cat"><div class="container"><div class="svc-cat-head reveal"><span class="svc-cat-ic c-purple">📱</span><div><span class="eyebrow">10 services</span><h2 class="mt-1">Social &amp; Creative</h2></div></div><div class="grid g4"><div class="card card-hover card-top svc-card c-purple reveal"><div class="icon-circle" style="font-size:20px">📲</div><h3 style="font-size:1rem">Social Media Management</h3><p style="font-size:.85rem">Grow on Instagram, Facebook &amp; LinkedIn with content that converts.</p><div class="svc-foot"><span class="svc-price">₹3,499–₹8,999/mo</span><a class="svc-arrow" href="service-social-media-marketing.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-purple reveal"><div class="icon-circle" style="font-size:20px">🎨</div><h3 style="font-size:1rem">Graphic Design</h3><p style="font-size:.85rem">From posters and logos to packaging and full branding.</p><div class="svc-foot"><span class="svc-price">₹150 onwards</span><a class="svc-arrow" href="service-graphic-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-purple reveal"><div class="icon-circle" style="font-size:20px">🎥</div><h3 style="font-size:1rem">UGC Creator Marketing</h3><p style="font-size:.85rem">Scroll-stopping, creator-style reels that sell.</p><div class="svc-foot"><span class="svc-price">₹2,100–₹5,100/campaign</span><a class="svc-arrow" href="service-ugc-reels.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-purple reveal"><div class="icon-circle" style="font-size:20px">📈</div><h3 style="font-size:1rem">Instagram Growth Strategy</h3><p style="font-size:.85rem">Real followers, engagement and growth strategies.</p><div class="svc-foot"><span class="svc-price">₹2,999/mo</span><a class="svc-arrow" href="service-social-media-marketing.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-purple reveal"><div class="icon-circle" style="font-size:20px">🗓️</div><h3 style="font-size:1rem">Content Calendar Planning</h3><p style="font-size:.85rem">Strategic content planning for consistent growth.</p><div class="svc-foot"><span class="svc-price">₹999/mo</span><a class="svc-arrow" href="service-social-media-marketing.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-purple reveal"><div class="icon-circle" style="font-size:20px">🎬</div><h3 style="font-size:1rem">Reel Editing</h3><p style="font-size:.85rem">High-converting reels that get more reach and engagement.</p><div class="svc-foot"><span class="svc-price">₹399 onwards</span><a class="svc-arrow" href="service-ugc-reels.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-purple reveal"><div class="icon-circle" style="font-size:20px">🎞️</div><h3 style="font-size:1rem">Motion Graphics</h3><p style="font-size:.85rem">Dynamic motion graphics that tell your brand story.</p><div class="svc-foot"><span class="svc-price">₹999 onwards</span><a class="svc-arrow" href="service-graphic-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-purple reveal"><div class="icon-circle" style="font-size:20px">🖼️</div><h3 style="font-size:1rem">Thumbnail Design</h3><p style="font-size:.85rem">Eye-catching thumbnails that increase CTR.</p><div class="svc-foot"><span class="svc-price">₹199</span><a class="svc-arrow" href="service-graphic-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-purple reveal"><div class="icon-circle" style="font-size:20px">✨</div><h3 style="font-size:1rem">Story Design</h3><p style="font-size:.85rem">Creative stories that boost engagement.</p><div class="svc-foot"><span class="svc-price">₹99</span><a class="svc-arrow" href="service-graphic-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-purple reveal"><div class="icon-circle" style="font-size:20px">🎠</div><h3 style="font-size:1rem">Carousel Design</h3><p style="font-size:.85rem">Informative carousels that educate and convert.</p><div class="svc-foot"><span class="svc-price">₹299</span><a class="svc-arrow" href="service-graphic-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></div></div></section><section id="graphic-branding" class="svc-cat"><div class="container"><div class="svc-cat-head reveal"><span class="svc-cat-ic c-amber">🎨</span><div><span class="eyebrow">14 services</span><h2 class="mt-1">Graphic Design &amp; Branding</h2></div></div><div class="grid g4"><div class="card card-hover card-top svc-card c-amber reveal"><div class="icon-circle" style="font-size:20px">✒️</div><h3 style="font-size:1rem">Logo Design</h3><p style="font-size:.85rem">Memorable logos that establish a strong brand identity.</p><div class="svc-foot"><span class="svc-price">₹850</span><a class="svc-arrow" href="service-logo-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-amber reveal"><div class="icon-circle" style="font-size:20px">💼</div><h3 style="font-size:1rem">Business Card Design</h3><p style="font-size:.85rem">Professional business cards that leave a lasting impression.</p><div class="svc-foot"><span class="svc-price">₹230</span><a class="svc-arrow" href="service-graphic-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-amber reveal"><div class="icon-circle" style="font-size:20px">📄</div><h3 style="font-size:1rem">Letterhead Design</h3><p style="font-size:.85rem">Branded letterheads for professional correspondence.</p><div class="svc-foot"><span class="svc-price">₹350</span><a class="svc-arrow" href="service-graphic-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-amber reveal"><div class="icon-circle" style="font-size:20px">🪪</div><h3 style="font-size:1rem">ID Card Design</h3><p style="font-size:.85rem">Clean, professional ID cards for your team.</p><div class="svc-foot"><span class="svc-price">₹350</span><a class="svc-arrow" href="service-graphic-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-amber reveal"><div class="icon-circle" style="font-size:20px">🪧</div><h3 style="font-size:1rem">Poster Design</h3><p style="font-size:.85rem">Promotional posters for events, offers and branding.</p><div class="svc-foot"><span class="svc-price">₹149–₹399</span><a class="svc-arrow" href="service-graphic-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-amber reveal"><div class="icon-circle" style="font-size:20px">📰</div><h3 style="font-size:1rem">Flyer Design</h3><p style="font-size:.85rem">Creative flyers for promotions, events &amp; businesses.</p><div class="svc-foot"><span class="svc-price">₹199</span><a class="svc-arrow" href="service-graphic-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-amber reveal"><div class="icon-circle" style="font-size:20px">📑</div><h3 style="font-size:1rem">Brochure Design</h3><p style="font-size:.85rem">Professional brochures that communicate your brand.</p><div class="svc-foot"><span class="svc-price">₹800</span><a class="svc-arrow" href="service-brochure-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-amber reveal"><div class="icon-circle" style="font-size:20px">📂</div><h3 style="font-size:1rem">Trifold Brochure</h3><p style="font-size:.85rem">3-panel brochures for products and services.</p><div class="svc-foot"><span class="svc-price">₹800</span><a class="svc-arrow" href="service-brochure-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-amber reveal"><div class="icon-circle" style="font-size:20px">📚</div><h3 style="font-size:1rem">Catalogue Design</h3><p style="font-size:.85rem">Product &amp; service catalogues that showcase your brand.</p><div class="svc-foot"><span class="svc-price">₹1,200 onwards</span><a class="svc-arrow" href="service-brochure-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-amber reveal"><div class="icon-circle" style="font-size:20px">🏢</div><h3 style="font-size:1rem">Company Profile Design</h3><p style="font-size:.85rem">Company profiles that build credibility and trust.</p><div class="svc-foot"><span class="svc-price">₹2,500 onwards</span><a class="svc-arrow" href="service-brochure-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-amber reveal"><div class="icon-circle" style="font-size:20px">📦</div><h3 style="font-size:1rem">Packaging Design</h3><p style="font-size:.85rem">Creative packaging that increases product appeal.</p><div class="svc-foot"><span class="svc-price">₹999 onwards</span><a class="svc-arrow" href="service-graphic-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-amber reveal"><div class="icon-circle" style="font-size:20px">🏷️</div><h3 style="font-size:1rem">Label Design</h3><p style="font-size:.85rem">Attractive labels that stand out on the shelf.</p><div class="svc-foot"><span class="svc-price">₹599 onwards</span><a class="svc-arrow" href="service-graphic-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-amber reveal"><div class="icon-circle" style="font-size:20px">🎨</div><h3 style="font-size:1rem">Brand Identity Kit</h3><p style="font-size:.85rem">Complete branding kit — logo, colors, fonts &amp; more.</p><div class="svc-foot"><span class="svc-price">₹2,999 onwards</span><a class="svc-arrow" href="service-logo-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-amber reveal"><div class="icon-circle" style="font-size:20px">📘</div><h3 style="font-size:1rem">Brand Guidelines</h3><p style="font-size:.85rem">Brand rulebook for consistent, professional branding.</p><div class="svc-foot"><span class="svc-price">₹3,999 onwards</span><a class="svc-arrow" href="service-logo-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></div></div></section><section id="web-development" class="svc-cat"><div class="container"><div class="svc-cat-head reveal"><span class="svc-cat-ic c-blue">💻</span><div><span class="eyebrow">10 services</span><h2 class="mt-1">Web &amp; Development</h2></div></div><div class="grid g4"><div class="card card-hover card-top svc-card c-blue reveal"><div class="icon-circle" style="font-size:20px">🖥️</div><h3 style="font-size:1rem">Landing Page</h3><p style="font-size:.85rem">High-converting landing pages that generate leads.</p><div class="svc-foot"><span class="svc-price">₹3,500 onwards</span><a class="svc-arrow" href="service-website-development.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-blue reveal"><div class="icon-circle" style="font-size:20px">💻</div><h3 style="font-size:1rem">Business Website</h3><p style="font-size:.85rem">Modern, responsive websites for your business.</p><div class="svc-foot"><span class="svc-price">₹6,500–₹18,000</span><a class="svc-arrow" href="service-website-development.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-blue reveal"><div class="icon-circle" style="font-size:20px">🏢</div><h3 style="font-size:1rem">Corporate Website</h3><p style="font-size:.85rem">Advanced websites for companies and organizations.</p><div class="svc-foot"><span class="svc-price">₹12,000–₹27,000</span><a class="svc-arrow" href="service-website-development.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-blue reveal"><div class="icon-circle" style="font-size:20px">🛒</div><h3 style="font-size:1rem">Ecommerce Website</h3><p style="font-size:.85rem">Powerful online stores that sell 24/7.</p><div class="svc-foot"><span class="svc-price">₹18,000–₹45,000</span><a class="svc-arrow" href="service-website-development.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-blue reveal"><div class="icon-circle" style="font-size:20px">🔄</div><h3 style="font-size:1rem">Website Redesign</h3><p style="font-size:.85rem">Redesign your website for better performance &amp; UX.</p><div class="svc-foot"><span class="svc-price">₹4,999 onwards</span><a class="svc-arrow" href="service-website-development.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-blue reveal"><div class="icon-circle" style="font-size:20px">🔧</div><h3 style="font-size:1rem">Website Maintenance</h3><p style="font-size:.85rem">Regular updates, backups and technical support.</p><div class="svc-foot"><span class="svc-price">₹999/mo</span><a class="svc-arrow" href="service-website-development.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-blue reveal"><div class="icon-circle" style="font-size:20px">📊</div><h3 style="font-size:1rem">Dashboard &amp; KPI System</h3><p style="font-size:.85rem">Dashboards to track your business performance.</p><div class="svc-foot"><span class="svc-price">₹2,000–₹15,000</span><a class="svc-arrow" href="service-dashboards.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-blue reveal"><div class="icon-circle" style="font-size:20px">🔗</div><h3 style="font-size:1rem">CRM Integration</h3><p style="font-size:.85rem">Integrate CRM to manage leads and customers.</p><div class="svc-foot"><span class="svc-price">₹4,999 onwards</span><a class="svc-arrow" href="service-dashboards.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-blue reveal"><div class="icon-circle" style="font-size:20px">⚡</div><h3 style="font-size:1rem">Website Speed Optimization</h3><p style="font-size:.85rem">Improve speed, performance and Core Web Vitals.</p><div class="svc-foot"><span class="svc-price">₹2,500</span><a class="svc-arrow" href="service-website-development.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-blue reveal"><div class="icon-circle" style="font-size:20px">🔒</div><h3 style="font-size:1rem">Website Security Setup</h3><p style="font-size:.85rem">Secure your website from threats and hacks.</p><div class="svc-foot"><span class="svc-price">₹2,999</span><a class="svc-arrow" href="service-website-development.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></div></div></section><section id="video-production" class="svc-cat"><div class="container"><div class="svc-cat-head reveal"><span class="svc-cat-ic c-pink">🎬</span><div><span class="eyebrow">8 services</span><h2 class="mt-1">Video Production</h2></div></div><div class="grid g4"><div class="card card-hover card-top svc-card c-pink reveal"><div class="icon-circle" style="font-size:20px">🎬</div><h3 style="font-size:1rem">Video Editing</h3><p style="font-size:.85rem">Professional video editing for all types of content.</p><div class="svc-foot"><span class="svc-price">₹500 onwards</span><a class="svc-arrow" href="service-ugc-reels.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-pink reveal"><div class="icon-circle" style="font-size:20px">🎥</div><h3 style="font-size:1rem">Short-form Reels</h3><p style="font-size:.85rem">Engaging short videos that drive max reach.</p><div class="svc-foot"><span class="svc-price">₹499–₹1,999</span><a class="svc-arrow" href="service-ugc-reels.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-pink reveal"><div class="icon-circle" style="font-size:20px">🎞️</div><h3 style="font-size:1rem">Corporate Video Editing</h3><p style="font-size:.85rem">Edit corporate videos that build brand trust.</p><div class="svc-foot"><span class="svc-price">₹3,500 onwards</span><a class="svc-arrow" href="service-ugc-reels.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-pink reveal"><div class="icon-circle" style="font-size:20px">📹</div><h3 style="font-size:1rem">Product Video</h3><p style="font-size:.85rem">Product videos that highlight features &amp; benefits.</p><div class="svc-foot"><span class="svc-price">₹1,500 onwards</span><a class="svc-arrow" href="service-ugc-reels.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-pink reveal"><div class="icon-circle" style="font-size:20px">🌀</div><h3 style="font-size:1rem">CGI Advertisement</h3><p style="font-size:.85rem">Scroll-stopping CGI ads built to go viral.</p><div class="svc-foot"><span class="svc-price">₹1,500 onwards</span><a class="svc-arrow" href="service-ugc-reels.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-pink reveal"><div class="icon-circle" style="font-size:20px">🧊</div><h3 style="font-size:1rem">3D Product Animation</h3><p style="font-size:.85rem">3D animations that bring your products to life.</p><div class="svc-foot"><span class="svc-price">₹2,500 onwards</span><a class="svc-arrow" href="service-ugc-reels.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-pink reveal"><div class="icon-circle" style="font-size:20px">🎨</div><h3 style="font-size:1rem">Motion Graphics Video</h3><p style="font-size:.85rem">Dynamic motion graphics for branding &amp; promos.</p><div class="svc-foot"><span class="svc-price">₹1,999 onwards</span><a class="svc-arrow" href="service-ugc-reels.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-pink reveal"><div class="icon-circle" style="font-size:20px">💡</div><h3 style="font-size:1rem">Explainer Video</h3><p style="font-size:.85rem">Explainer videos that simplify your message.</p><div class="svc-foot"><span class="svc-price">₹4,999 onwards</span><a class="svc-arrow" href="service-ugc-reels.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></div></div></section><section id="business-growth" class="svc-cat"><div class="container"><div class="svc-cat-head reveal"><span class="svc-cat-ic c-teal">📈</span><div><span class="eyebrow">7 services</span><h2 class="mt-1">Business Growth Solutions</h2></div></div><div class="grid g4"><div class="card card-hover card-top svc-card c-teal reveal"><div class="icon-circle" style="font-size:20px">🤝</div><h3 style="font-size:1rem">Business Consultation</h3><p style="font-size:.85rem">Expert advice to grow your business faster.</p><div class="svc-foot"><span class="svc-price">₹999/session</span><a class="svc-arrow" href="service-business-consultation.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-teal reveal"><div class="icon-circle" style="font-size:20px">🧭</div><h3 style="font-size:1rem">Digital Strategy</h3><p style="font-size:.85rem">Custom digital strategies tailored to your goals.</p><div class="svc-foot"><span class="svc-price">₹4,999 onwards</span><a class="svc-arrow" href="service-business-consultation.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-teal reveal"><div class="icon-circle" style="font-size:20px">🔎</div><h3 style="font-size:1rem">Marketing Audit</h3><p style="font-size:.85rem">Detailed audit to find gaps and growth opportunities.</p><div class="svc-foot"><span class="svc-price">₹2,999</span><a class="svc-arrow" href="service-business-consultation.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-teal reveal"><div class="icon-circle" style="font-size:20px">🧲</div><h3 style="font-size:1rem">Sales Funnel Setup</h3><p style="font-size:.85rem">High-converting funnels that increase sales.</p><div class="svc-foot"><span class="svc-price">₹7,999</span><a class="svc-arrow" href="service-business-consultation.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-teal reveal"><div class="icon-circle" style="font-size:20px">📈</div><h3 style="font-size:1rem">Conversion Optimization</h3><p style="font-size:.85rem">Improve conversions and maximize ROI.</p><div class="svc-foot"><span class="svc-price">₹5,999</span><a class="svc-arrow" href="service-business-consultation.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-teal reveal"><div class="icon-circle" style="font-size:20px">📊</div><h3 style="font-size:1rem">Analytics Dashboard</h3><p style="font-size:.85rem">Custom analytics dashboards for smart decisions.</p><div class="svc-foot"><span class="svc-price">₹2,500</span><a class="svc-arrow" href="service-dashboards.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-teal reveal"><div class="icon-circle" style="font-size:20px">📑</div><h3 style="font-size:1rem">Performance Reports</h3><p style="font-size:.85rem">Regular performance reports with actionable insights.</p><div class="svc-foot"><span class="svc-price">Included with Packages</span><a class="svc-arrow" href="service-dashboards.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></div></div></section><section id="local-business" class="svc-cat"><div class="container"><div class="svc-cat-head reveal"><span class="svc-cat-ic c-coral">⭐</span><div><span class="eyebrow">7 services</span><h2 class="mt-1">Local Business Services</h2></div></div><div class="grid g4"><div class="card card-hover card-top svc-card c-coral reveal"><div class="icon-circle" style="font-size:20px">📍</div><h3 style="font-size:1rem">Google Business Profile Setup</h3><p style="font-size:.85rem">Get your business listed and visible on Google.</p><div class="svc-foot"><span class="svc-price">₹999</span><a class="svc-arrow" href="service-local-seo.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-coral reveal"><div class="icon-circle" style="font-size:20px">⭐</div><h3 style="font-size:1rem">Review Management</h3><p style="font-size:.85rem">Manage and grow positive reviews for your business.</p><div class="svc-foot"><span class="svc-price">₹999/mo</span><a class="svc-arrow" href="service-local-seo.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-coral reveal"><div class="icon-circle" style="font-size:20px">📇</div><h3 style="font-size:1rem">NFC Smart Review Card</h3><p style="font-size:.85rem">Tap-to-review NFC cards to collect reviews easily.</p><div class="svc-foot"><span class="svc-price">₹850</span><a class="svc-arrow" href="service-local-seo.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-coral reveal"><div class="icon-circle" style="font-size:20px">💬</div><h3 style="font-size:1rem">WhatsApp Business Setup</h3><p style="font-size:.85rem">Complete WhatsApp Business setup with catalog.</p><div class="svc-foot"><span class="svc-price">₹450</span><a class="svc-arrow" href="service-local-seo.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-coral reveal"><div class="icon-circle" style="font-size:20px">✅</div><h3 style="font-size:1rem">WhatsApp Verified Tick Assistance</h3><p style="font-size:.85rem">Get the verified green tick on WhatsApp Business.</p><div class="svc-foot"><span class="svc-price">₹850</span><a class="svc-arrow" href="service-local-seo.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-coral reveal"><div class="icon-circle" style="font-size:20px">🗺️</div><h3 style="font-size:1rem">Local SEO</h3><p style="font-size:.85rem">Rank locally and attract more customers in your area.</p><div class="svc-foot"><span class="svc-price">₹4,000/mo</span><a class="svc-arrow" href="service-local-seo.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-coral reveal"><div class="icon-circle" style="font-size:20px">🔗</div><h3 style="font-size:1rem">Citation Building</h3><p style="font-size:.85rem">Build consistent local citations across directories.</p><div class="svc-foot"><span class="svc-price">₹2,000 onwards</span><a class="svc-arrow" href="service-local-seo.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></div></div></section><section id="office-documents" class="svc-cat"><div class="container"><div class="svc-cat-head reveal"><span class="svc-cat-ic c-blue">📄</span><div><span class="eyebrow">8 services</span><h2 class="mt-1">Office &amp; Business Documents</h2></div></div><div class="grid g4"><div class="card card-hover card-top svc-card c-blue reveal"><div class="icon-circle" style="font-size:20px">📊</div><h3 style="font-size:1rem">PPT Design</h3><p style="font-size:.85rem">Professional presentations that impress.</p><div class="svc-foot"><span class="svc-price">₹800 / 10 slides</span><a class="svc-arrow" href="service-brochure-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-blue reveal"><div class="icon-circle" style="font-size:20px">📃</div><h3 style="font-size:1rem">Proposal Design</h3><p style="font-size:.85rem">Winning proposals that close more deals.</p><div class="svc-foot"><span class="svc-price">₹999 onwards</span><a class="svc-arrow" href="service-brochure-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-blue reveal"><div class="icon-circle" style="font-size:20px">🧾</div><h3 style="font-size:1rem">Invoice Design</h3><p style="font-size:.85rem">Custom invoices for your business.</p><div class="svc-foot"><span class="svc-price">₹299</span><a class="svc-arrow" href="service-brochure-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-blue reveal"><div class="icon-circle" style="font-size:20px">🏢</div><h3 style="font-size:1rem">Company Profile</h3><p style="font-size:.85rem">Professional company profiles.</p><div class="svc-foot"><span class="svc-price">₹2,500</span><a class="svc-arrow" href="service-brochure-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-blue reveal"><div class="icon-circle" style="font-size:20px">📑</div><h3 style="font-size:1rem">Brochure</h3><p style="font-size:.85rem">Attractive brochures for products &amp; services.</p><div class="svc-foot"><span class="svc-price">₹800</span><a class="svc-arrow" href="service-brochure-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-blue reveal"><div class="icon-circle" style="font-size:20px">📄</div><h3 style="font-size:1rem">Resume Design</h3><p style="font-size:.85rem">Professional resumes that get you noticed.</p><div class="svc-foot"><span class="svc-price">₹499</span><a class="svc-arrow" href="service-brochure-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-blue reveal"><div class="icon-circle" style="font-size:20px">✉️</div><h3 style="font-size:1rem">Offer Letter Design</h3><p style="font-size:.85rem">Custom offer letters for your company.</p><div class="svc-foot"><span class="svc-price">₹299</span><a class="svc-arrow" href="service-brochure-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="card card-hover card-top svc-card c-blue reveal"><div class="icon-circle" style="font-size:20px">🏅</div><h3 style="font-size:1rem">Certificate Design</h3><p style="font-size:.85rem">Certificates for events, training &amp; appreciations.</p><div class="svc-foot"><span class="svc-price">₹299</span><a class="svc-arrow" href="service-brochure-design.html">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></div></div></section>
+
+<section class="section"><div class="container reveal">
+  <div class="cta-band"><div class="cta-deco d1"></div><div class="cta-deco d2"></div>
+    <h2>Not sure which service you need?</h2>
+    <p>Tell us your goal and we'll recommend the right mix — free, with no obligation. Post-pay available.</p>
+    <div class="cta-actions"><a class="btn btn-white btn-lg" href="https://wa.me/918586989832" target="_blank" rel="noopener">Start on WhatsApp</a><a class="btn btn-outline-white btn-lg" href="contact.html">Contact us</a></div>
+  </div></div></section>
+
+<script>
+/* ============================================================
+   DIGITAL DIGIX — shared site script
+   Injects nav + footer, wires up all interactions.
+   Works from file:// (no fetch / no build step).
+   ============================================================ */
+(function () {
+  'use strict';
+
+  /* ---------- ICONS ---------- */
+  var I = {
+    logo: '<svg class="logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M13 27V13l14 14V13" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="27" cy="13" r="2.4" fill="#fff"/><defs><linearGradient id="lg" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#15694A"/><stop offset="1" stop-color="#CF9A12"/></linearGradient></defs></svg>',
+    arrow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+    caret: '<svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>',
+    check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>',
+    sun: '<svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>',
+    moon: '<svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>',
+    search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>',
+    bolt: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>',
+    target: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg>',
+    palette: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="1.5"/><circle cx="17.5" cy="10.5" r="1.5"/><circle cx="8.5" cy="7.5" r="1.5"/><circle cx="6.5" cy="12.5" r="1.5"/><path d="M12 2a10 10 0 100 20c1.7 0 2-1.4 1.2-2.3-.8-1 .1-2.2 1.3-2.2H17a5 5 0 005-5c0-5-4.5-8.5-10-8.5z"/></svg>',
+    code: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 18l-6-6 6-6M16 6l6 6-6 6"/></svg>',
+    cpu: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg>',
+    compass: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M16 8l-2 6-6 2 2-6z"/></svg>',
+    gauge: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 13l4-4M3.5 16a9 9 0 1117 0"/><circle cx="12" cy="13" r="1.5"/></svg>',
+    chart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l3-4 3 3 5-7"/></svg>',
+    file: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5"/></svg>',
+    map: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>',
+    rocket: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15c-2 1-2 5-2 5s4 0 5-2M9 12a8 8 0 018-8c2 0 3 1 3 3a8 8 0 01-8 8z"/><circle cx="14.5" cy="9.5" r="1.5"/><path d="M9 12l-3 3M12 15l3-3"/></svg>',
+    'in': '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 11-4 0 2 2 0 014 0zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z"/></svg>',
+    fb: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></svg>',
+    ig: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>',
+    yt: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12s0-3.5-.45-5.18a2.6 2.6 0 00-1.83-1.84C18.05 4.5 12 4.5 12 4.5s-6.05 0-7.72.48A2.6 2.6 0 002.45 6.82C2 8.5 2 12 2 12s0 3.5.45 5.18a2.6 2.6 0 001.83 1.84C5.95 19.5 12 19.5 12 19.5s6.05 0 7.72-.48a2.6 2.6 0 001.83-1.84C22 15.5 22 12 22 12zM10 15.5v-7l6 3.5-6 3.5z"/></svg>',
+    x: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3l-7 8 8.2 10h-6.4l-5-6.1L8 21H5l7.4-8.5L4.6 3H11l4.5 5.6L17.5 3zm-1 16h1.7L8 4.8H6.2L16.5 19z"/></svg>',
+    wa: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.1-.3.2-.5 0a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.6-1.2.1-.1 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a1 1 0 00-.7.3c-.2.3-.9.9-.9 2.1s.9 2.5 1 2.6c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.2.7 3 .6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>'
+  };
+
+  /* ---------- SERVICE DATA (real Business Volunteers services) ---------- */
+  var categories = [
+    { name: 'Advertising & Performance', emoji: '🚀', cls: 'c-coral', href: 'services.html#advertising-performance', desc: 'SEO, Google & Meta Ads, lead gen & automation' },
+    { name: 'Social & Creative', emoji: '📱', cls: 'c-purple', href: 'services.html#social-creative', desc: 'Social media, reels, content & design' },
+    { name: 'Graphic Design & Branding', emoji: '🎨', cls: 'c-amber', href: 'services.html#graphic-branding', desc: 'Logos, branding, packaging & print' },
+    { name: 'Web & Development', emoji: '💻', cls: 'c-blue', href: 'services.html#web-development', desc: 'Websites, ecommerce, dashboards & CRM' },
+    { name: 'Video Production', emoji: '🎬', cls: 'c-pink', href: 'services.html#video-production', desc: 'Editing, reels, 3D, CGI & explainers' },
+    { name: 'Business Growth Solutions', emoji: '📈', cls: 'c-teal', href: 'services.html#business-growth', desc: 'Strategy, funnels, audits & analytics' },
+    { name: 'Local Business Services', emoji: '⭐', cls: 'c-coral', href: 'services.html#local-business', desc: 'GMB, reviews, local SEO & WhatsApp' },
+    { name: 'Office & Business Documents', emoji: '📄', cls: 'c-blue', href: 'services.html#office-documents', desc: 'Decks, proposals, invoices & resumes' }
+  ];
+  var navItems = [
+    { label: 'Home', href: 'index.html' },
+    { label: 'Services', href: 'services.html', mega: 'services' },
+    { label: 'Industries', href: 'industries.html' },
+    { label: 'Our Work', href: 'index.html#portfolio' },
+    { label: 'Pricing', href: 'pricing.html' },
+    { label: 'About', href: 'about.html' }
+  ];
+
+  var SOCIALS = [
+    { icon: 'in', label: 'LinkedIn',  href: 'https://www.linkedin.com/company/business-volunteers1' },
+    { icon: 'ig', label: 'Instagram', href: 'https://www.instagram.com/thebusinessvolunteers/' },
+    { icon: 'yt', label: 'YouTube',   href: 'https://www.youtube.com/@TheBusinessVolunteers' },
+    { icon: 'fb', label: 'Facebook',  href: 'https://www.facebook.com/people/Business-Volunteers/61579138254807/' },
+    { icon: 'wa', label: 'WhatsApp',  href: 'https://wa.me/918586989832' }
+  ];
+  var WHATSAPP = 'https://wa.me/918586989832';
+  var EMAIL = 'contact@businessvolunteers.online';
+  var PHONE = '+91 8586989832';
+  var PHONE_TEL = '+918586989832';
+  /* ---------- PRICING PACKAGES (single source of truth) ---------- */
+  var PACKAGES = [
+    { key:'starter', name:'Starter', tag:'For new brands finding their feet', emoji:'\uD83C\uDF31', cls:'c-blue', price:'\u20B93,499', badge:'',
+      feats:['2 social media platforms','12 posts per month','3 reels edited','1 festival poster','Monthly performance report','Basic content planning'] },
+    { key:'growth', name:'Growth', tag:'For brands ready to scale leads', emoji:'\uD83D\uDE80', cls:'c-purple', price:'\u20B95,999', badge:'Most Popular',
+      feats:['3 social media platforms','20 posts per month','8 reels edited','3 festival posters','Meta Ads setup','Monthly strategy call','Content calendar','Monthly performance report'] },
+    { key:'pro', name:'Pro', tag:'For brands going all-in on growth', emoji:'\uD83D\uDC51', cls:'c-coral', price:'\u20B98,999', badge:'Best ROI',
+      feats:['4 social media platforms','30 posts per month','12 reels edited','6 festival posters','Full Meta Ads management','Google Business Profile optimization','Weekly reports','Dedicated account manager','Monthly strategy meeting'] }
+  ];
+
+  function icon(n) { return I[n] || ''; }
+  function current() {
+    var p = (location.pathname.split('/').pop() || 'index.html');
+    return p === '' ? 'index.html' : p;
+  }
+
+  /* ---------- BUILD MEGA MENU ---------- */
+  function megaMenu() {
+    var data = categories;
+    var links = data.map(function (c) {
+      return '<a class="mega-link ' + c.cls + '" href="' + c.href + '">' +
+        '<span class="mega-ic" style="font-size:18px">' + (c.emoji || icon(c.icon)) + '</span>' +
+        '<div><h4>' + c.name + '</h4><p>' + c.desc + '</p></div></a>';
+    }).join('');
+    var feat = { chip: 'Post-Pay Available', h: 'Risk-free growth', p: 'Founder-led work across 89+ industries. Start now, pay after you see results.', cta: 'See all services', href: 'services.html' };
+    return '<div class="mega">' +
+      '<div class="mega-grid">' + links + '</div>' +
+      '<div class="mega-feat"><span class="chip">' + feat.chip + '</span>' +
+      '<h4>' + feat.h + '</h4><p>' + feat.p + '</p>' +
+      '<a href="' + feat.href + '">' + feat.cta + ' ' + icon('arrow') + '</a></div></div>';
+  }
+
+  /* ---------- BUILD NAV ---------- */
+  function buildNav() {
+    var cur = current();
+    var links = navItems.map(function (n) {
+      var active = n.href === cur ? ' active' : '';
+      if (n.mega) {
+        return '<div class="nav-item"><a class="nav-link' + active + '" href="' + n.href + '">' + n.label + ' ' + icon('caret') + '</a>' + megaMenu(n.mega) + '</div>';
+      }
+      return '<a class="nav-link' + active + '" href="' + n.href + '">' + n.label + '</a>';
+    }).join('');
+
+    var nav = document.createElement('header');
+    nav.className = 'nav';
+    nav.innerHTML =
+      '<div class="nav-inner">' +
+        '<a class="logo" href="index.html"><img class="brand-img" src="assets/img/logo-mark-emerald.png?v=4" alt="Digital Digix Logo" width="34" height="34"><span>Digital Digix</span></a>' +
+        '<nav class="nav-links" aria-label="Primary">' + links + '</nav>' +
+        '<div class="nav-cta">' +
+          '<button class="theme-toggle" id="themeBtn" aria-label="Toggle dark mode">' + icon('sun') + icon('moon') + '</button>' +
+          '<a class="btn btn-primary btn-sm" href="contact.html">Start a Project ' + icon('arrow') + '</a>' +
+          '<button class="hamburger" id="hambBtn" aria-label="Open menu"><span></span><span></span><span></span></button>' +
+        '</div>' +
+      '</div>';
+    document.body.insertBefore(nav, document.body.firstChild);
+
+    // mobile menu
+    var mm = document.createElement('div');
+    mm.className = 'mobile-menu';
+    mm.id = 'mobileMenu';
+    mm.innerHTML =
+      '<button class="mobile-close" id="closeBtn" aria-label="Close menu"><svg viewBox="0 0 24 24" width="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>' +
+      navItems.map(function (n) { return '<a href="' + n.href + '">' + n.label + ' ' + icon('arrow') + '</a>'; }).join('') +
+      '<a class="btn btn-primary fw" style="margin-top:22px;height:52px;justify-content:center;" href="contact.html">Start a Project</a>' +
+      '<button class="btn btn-ghost fw" id="mTheme" style="margin-top:12px;height:52px;justify-content:center;">Toggle theme</button>';
+    document.body.appendChild(mm);
+  }
+
+  /* ---------- BUILD FOOTER ---------- */
+  function buildFooter() {
+    var f = document.createElement('footer');
+    f.className = 'footer';
+    var svcLinks = categories.map(function (c) { return '<a href="' + c.href + '">' + c.name + '</a>'; }).join('');
+    var socialLinks = SOCIALS.map(function (s) {
+      return '<a href="' + s.href + '" target="_blank" rel="noopener" aria-label="' + s.label + '">' + icon(s.icon) + '</a>';
+    }).join('');
+    f.innerHTML =
+      '<div class="container"><div class="footer-grid">' +
+        '<div><a class="logo" href="index.html"><img class="brand-img" src="assets/img/logo-mark-emerald.png?v=4" alt="Digital Digix Logo" width="34" height="34"><span>Digital Digix</span></a>' +
+          '<p>89 industries. 2,700+ clients. Founder-led digital marketing from Noida Sector 62, Delhi NCR — premium creative, data-driven strategy and dashboards that turn growth into a science.</p>' +
+          '<div class="socials">' + socialLinks + '</div></div>' +
+        '<div><h4>Services</h4><div class="footer-links">' + svcLinks + '</div></div>' +
+        '<div><h4>Explore</h4><div class="footer-links">' +
+          '<a href="services.html">All Services</a><a href="industries.html">Industries</a><a href="portfolio.html">Our Work</a><a href="pricing.html">Pricing</a><a href="testimonials.html">Testimonials</a><a href="careers.html">Careers</a><a href="faq.html">FAQ</a><a href="about.html">About</a></div></div>' +
+        '<div><h4>Get in touch</h4><div class="footer-links">' +
+          '<a href="contact.html">Contact us</a><a href="mailto:' + EMAIL + '">' + EMAIL + '</a><a href="tel:' + PHONE_TEL + '">' + PHONE + '</a></div>' +
+          '<a class="btn btn-primary btn-sm" style="margin-top:18px;" href="contact.html">Book a call ' + icon('arrow') + '</a></div>' +
+      '</div>' +
+      '<div class="footer-bottom"><span>© ' + new Date().getFullYear() + ' Digital Digix. All rights reserved.</span>' +
+        '<span class="flex gap"><a href="#">Privacy</a><a href="#">Terms</a><span>Made with ♥ in India</span></span></div>' +
+      '</div>';
+    document.body.appendChild(f);
+
+    buildWhatsApp();
+  }
+
+  /* ---------- FLOATING WHATSAPP ---------- */
+  function buildWhatsApp() {
+    if (document.querySelector('.wa-float')) return;
+    var a = document.createElement('a');
+    a.className = 'wa-float';
+    a.href = WHATSAPP;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.setAttribute('aria-label', 'Chat with us on WhatsApp');
+    a.innerHTML = icon('wa') + '<span class="wa-tip">Chat with us</span>';
+    document.body.appendChild(a);
+  }
+
+  /* ---------- THEME ---------- */
+  function setTheme(t) {
+    document.documentElement.setAttribute('data-theme', t);
+    try { localStorage.setItem('digitaldigix-theme', t); } catch (e) {}
+  }
+  function toggleTheme() {
+    var cur = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    setTheme(cur === 'dark' ? 'light' : 'dark');
+  }
+
+  /* ---------- INTERACTIONS ---------- */
+  function wire() {
+    // theme
+    var tb = document.getElementById('themeBtn');
+    if (tb) tb.addEventListener('click', toggleTheme);
+    var mt = document.getElementById('mTheme');
+    if (mt) mt.addEventListener('click', toggleTheme);
+
+    // mobile menu
+    var mm = document.getElementById('mobileMenu');
+    var hb = document.getElementById('hambBtn');
+    var cb = document.getElementById('closeBtn');
+    function openM() { mm.classList.add('open'); document.body.classList.add('menu-open'); }
+    function closeM() { mm.classList.remove('open'); document.body.classList.remove('menu-open'); }
+    if (hb) hb.addEventListener('click', openM);
+    if (cb) cb.addEventListener('click', closeM);
+    if (mm) mm.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeM); });
+
+    // smooth-scroll to Our Work portfolio on homepage
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a[href$="#portfolio"]'); if (!a) return;
+      if (current() === 'index.html') { var t = document.getElementById('portfolio'); if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); try { history.replaceState(null, '', '#portfolio'); } catch (x) {} } }
+    });
+
+    // navbar scroll state
+    var nav = document.querySelector('.nav');
+    function onScroll() { if (window.scrollY > 24) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); }
+    onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+    // FAQ accordion (event delegation)
+    document.addEventListener('click', function (e) {
+      var q = e.target.closest('.faq-q');
+      if (!q) return;
+      var item = q.parentElement;
+      var a = item.querySelector('.faq-a');
+      var open = item.classList.toggle('open');
+      q.setAttribute('aria-expanded', open ? 'true' : 'false');
+      a.style.maxHeight = open ? a.scrollHeight + 'px' : '0';
+    });
+
+    // scroll reveal
+    var reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && reveals.length) {
+      var ro = new IntersectionObserver(function (ents) {
+        ents.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); ro.unobserve(en.target); } });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      reveals.forEach(function (r) { ro.observe(r); });
+    } else { reveals.forEach(function (r) { r.classList.add('in'); }); }
+
+    // count-up
+    var counters = document.querySelectorAll('[data-count]');
+    if ('IntersectionObserver' in window && counters.length) {
+      var co = new IntersectionObserver(function (ents) {
+        ents.forEach(function (en) { if (en.isIntersecting) { countUp(en.target); co.unobserve(en.target); } });
+      }, { threshold: 0.5 });
+      counters.forEach(function (c) { co.observe(c); });
+    } else { counters.forEach(countUp); }
+
+    // ring gauges in hero
+    document.querySelectorAll('.ring .val').forEach(function (c) {
+      var pct = +c.getAttribute('data-pct') || 0, r = +c.getAttribute('r'),
+          len = 2 * Math.PI * r;
+      c.style.strokeDasharray = len;
+      c.style.strokeDashoffset = len;
+      setTimeout(function () { c.style.transition = 'stroke-dashoffset 1.4s cubic-bezier(.25,.46,.45,.94)'; c.style.strokeDashoffset = len * (1 - pct / 100); }, 400);
+    });
+
+    // hero score ticker
+    var sc = document.getElementById('scoreTick');
+    if (sc) { var v = 0; var iv = setInterval(function () { v += 2; if (v >= 92) { v = 92; clearInterval(iv); } sc.textContent = v; }, 30); }
+
+    // audit demo (any .audit-form)
+    document.querySelectorAll('.audit-form').forEach(function (frm) {
+      frm.addEventListener('submit', function (e) { e.preventDefault(); runAudit(); });
+    });
+
+    // pricing toggle
+    var pt = document.getElementById('priceToggle');
+    if (pt) {
+      pt.querySelectorAll('button').forEach(function (b) {
+        b.addEventListener('click', function () {
+          pt.querySelectorAll('button').forEach(function (x) { x.classList.remove('active'); });
+          b.classList.add('active');
+          var annual = b.getAttribute('data-mode') === 'annual';
+          document.querySelectorAll('[data-monthly]').forEach(function (el) {
+            el.textContent = annual ? el.getAttribute('data-annual') : el.getAttribute('data-monthly');
+          });
+          document.querySelectorAll('.per').forEach(function (el) { el.textContent = annual ? '/mo billed yearly' : '/mo'; });
+        });
+      });
+    }
+
+    // ROI calculator
+    var roi = document.getElementById('roiCalc');
+    if (roi) wireRoi(roi);
+
+    // contact / generic forms -> success state
+    document.querySelectorAll('.lead-form').forEach(function (frm) {
+      frm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        frm.innerHTML = '<div class="tc" style="padding:30px 0;"><div class="icon-circle c-teal" style="margin:0 auto 14px;width:56px;height:56px;border-radius:50%;">' + icon('check') + '</div><h3>You\'re all set!</h3><p class="mt-1">Thanks — we\'ll be in touch within one business day. Check your inbox for a confirmation.</p></div>';
+      });
+    });
+  }
+
+  function countUp(el) {
+    var target = parseFloat(el.getAttribute('data-count')),
+        dec = (el.getAttribute('data-count').indexOf('.') > -1) ? 1 : 0,
+        prefix = el.getAttribute('data-prefix') || '',
+        suffix = el.getAttribute('data-suffix') || '',
+        dur = 1300, start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      var val = target * eased;
+      el.textContent = prefix + (dec ? val.toFixed(1) : Math.round(val).toLocaleString('en-IN')) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  function runAudit() {
+    var modal = document.getElementById('auditModal');
+    if (!modal) return;
+    var body = modal.querySelector('.audit-body');
+    var loading = modal.querySelector('.audit-loading');
+    modal.classList.add('open');
+    if (loading) loading.style.display = 'block';
+    if (body) body.style.display = 'none';
+    setTimeout(function () {
+      if (loading) loading.style.display = 'none';
+      if (body) body.style.display = 'block';
+      modal.querySelectorAll('.ring .val').forEach(function (c) {
+        var pct = +c.getAttribute('data-pct') || 0, r = +c.getAttribute('r'), len = 2 * Math.PI * r;
+        c.style.strokeDasharray = len; c.style.strokeDashoffset = len;
+        setTimeout(function () { c.style.transition = 'stroke-dashoffset 1.2s ease-out'; c.style.strokeDashoffset = len * (1 - pct / 100); }, 80);
+      });
+    }, 1700);
+  }
+
+  function wireRoi(root) {
+    var rev = root.querySelector('#roiRev'), spend = root.querySelector('#roiSpend'), growth = root.querySelector('#roiGrowth');
+    function fmt(n) { return '₹' + Math.round(n).toLocaleString('en-IN'); }
+    function update() {
+      var r = +rev.value, s = +spend.value, g = +growth.value;
+      root.querySelector('#roiRevOut').textContent = fmt(r);
+      root.querySelector('#roiSpendOut').textContent = fmt(s);
+      root.querySelector('#roiGrowthOut').textContent = g + '%';
+      var projected = r * (1 + g / 100);
+      var lift = projected - r;
+      var roiX = s > 0 ? (lift / s) : 0;
+      root.querySelector('#roiProjected').textContent = fmt(projected);
+      root.querySelector('#roiLift').textContent = fmt(lift);
+      root.querySelector('#roiX').textContent = roiX.toFixed(1) + '×';
+    }
+    [rev, spend, growth].forEach(function (el) { if (el) el.addEventListener('input', update); });
+    update();
+  }
+
+  /* ---------- PREMIUM FX ---------- */
+  function initFX() {
+    var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // scroll progress bar
+    var bar = document.createElement('div'); bar.className = 'scroll-progress'; document.body.appendChild(bar);
+    function prog() { var h = document.documentElement, sc = h.scrollTop || document.body.scrollTop, max = h.scrollHeight - h.clientHeight; bar.style.width = (max > 0 ? sc / max * 100 : 0) + '%'; }
+    prog(); window.addEventListener('scroll', prog, { passive: true });
+    if (reduce) return;
+
+    var fine = matchMedia('(pointer:fine)').matches;
+    var hoverSel = 'a,button,.card-hover,.pill,input,select,textarea,.faq-q,.theme-toggle';
+
+    if (fine) {
+      document.body.classList.add('fx-cursor');
+      var dot = document.createElement('div'); dot.className = 'cursor-dot';
+      var ring = document.createElement('div'); ring.className = 'cursor-ring';
+      document.body.appendChild(dot); document.body.appendChild(ring);
+      var mx = innerWidth / 2, my = innerHeight / 2, rx = mx, ry = my;
+      window.addEventListener('mousemove', function (e) { mx = e.clientX; my = e.clientY; dot.style.transform = 'translate(' + mx + 'px,' + my + 'px) translate(-50%,-50%)'; });
+      (function loop() { rx += (mx - rx) * .18; ry += (my - ry) * .18; ring.style.transform = 'translate(' + rx + 'px,' + ry + 'px) translate(-50%,-50%)'; requestAnimationFrame(loop); })();
+      document.addEventListener('mouseover', function (e) { if (e.target.closest(hoverSel)) ring.classList.add('is-hover'); });
+      document.addEventListener('mouseout', function (e) { if (e.target.closest(hoverSel)) ring.classList.remove('is-hover'); });
+      window.addEventListener('mousedown', function () { ring.classList.add('is-down'); });
+      window.addEventListener('mouseup', function () { ring.classList.remove('is-down'); });
+      document.addEventListener('mouseleave', function () { dot.style.opacity = ring.style.opacity = '0'; });
+      document.addEventListener('mouseenter', function () { dot.style.opacity = '1'; ring.style.opacity = ''; });
+    }
+
+    document.querySelectorAll('.btn-primary, .magnetic').forEach(function (el) {
+      el.addEventListener('mousemove', function (e) { var r = el.getBoundingClientRect(); el.style.transform = 'translate(' + (e.clientX - r.left - r.width / 2) * .25 + 'px,' + (e.clientY - r.top - r.height / 2) * .3 + 'px)'; });
+      el.addEventListener('mouseleave', function () { el.style.transform = ''; });
+    });
+
+    document.querySelectorAll('.card-hover').forEach(function (c) {
+      c.addEventListener('mousemove', function (e) {
+        var r = c.getBoundingClientRect(), px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
+        c.style.setProperty('--mx', px * 100 + '%'); c.style.setProperty('--my', py * 100 + '%');
+        c.style.transform = 'perspective(900px) rotateX(' + (.5 - py) * 5 + 'deg) rotateY(' + (px - .5) * 5 + 'deg) translateY(-6px)';
+      });
+      c.addEventListener('mouseleave', function () { c.style.transform = ''; });
+    });
+  }
+
+  function buildMarquee() {
+    var hero = document.querySelector('.hero'); if (!hero) return;
+    var items = ['Post-Pay Available', 'Zero Lock-In', 'Founder-Led Team', 'Pay After Results', '2-Hour Response', 'Reels from ₹380', 'Posters from ₹149', 'Logo Design from ₹999', 'Dashboards from ₹2,000', 'SEO from ₹4,000/mo', 'Websites that Convert', 'No Long Contracts'];
+    var one = items.map(function (t) { return '<span class="marquee-item">' + t + '</span>'; }).join('');
+    var m = document.createElement('div'); m.className = 'marquee';
+    m.innerHTML = '<div class="marquee-track">' + one + one + '</div>';
+    hero.parentNode.insertBefore(m, hero.nextSibling);
+  }
+
+  function buildIntro() {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    try { if (sessionStorage.getItem('dd-intro')) return; sessionStorage.setItem('dd-intro', '1'); } catch (e) {}
+    var c = document.createElement('div'); c.className = 'intro-curtain';
+    c.innerHTML = '<div class="il">Digital <span>Digix</span></div>';
+    document.body.appendChild(c);
+    document.body.style.overflow = 'hidden';
+    setTimeout(function () { c.classList.add('done'); document.body.style.overflow = ''; setTimeout(function () { c.remove(); }, 900); }, 1100);
+  }
+
+  /* ---------- RENDER PRICING (reused by Pricing + Social Media pages) ---------- */
+  function buildPricing() {
+    var mounts = document.querySelectorAll('[data-pricing]');
+    if (!mounts.length) return;
+    mounts.forEach(function (mount) {
+      var ctaLabel = mount.getAttribute('data-cta') || 'Start a Project';
+      var showWa = mount.getAttribute('data-wa') !== 'false';
+      var cmp = mount.getAttribute('data-compare') || '#compare';
+      mount.classList.add('pp-grid');
+      mount.innerHTML = PACKAGES.map(function (p) {
+        var badge = p.badge ? '<span class="pp-badge' + (p.badge === 'Best ROI' ? ' roi' : '') + '">' + p.badge + '</span>' : '';
+        var feats = p.feats.map(function (f) { return '<li><span class="ck">' + icon('check') + '</span><span>' + f + '</span></li>'; }).join('');
+        var waMsg = encodeURIComponent("Hi Digital Digix, I'm interested in the " + p.name + " plan (" + p.price + "/mo).");
+        var wa = showWa ? '<a class="btn wa" href="' + WHATSAPP + '?text=' + waMsg + '" target="_blank" rel="noopener">Enquire on WhatsApp</a>' : '';
+        return '<div class="pp-card ' + p.cls + (p.key === 'growth' ? ' popular' : '') + ' reveal">' + badge +
+          '<div class="pp-ic">' + p.emoji + '</div>' +
+          '<div class="pp-name">' + p.name + '</div>' +
+          '<div class="pp-tag">' + p.tag + '</div>' +
+          '<div class="pp-price"><b>' + p.price + '</b><span>/month</span></div>' +
+          '<div class="pp-sub">Billed monthly &middot; cancel anytime</div>' +
+          '<ul class="pp-feats">' + feats + '</ul>' +
+          '<div class="pp-cta"><a class="btn btn-primary" href="contact.html">' + ctaLabel + '</a>' + wa +
+          '<a class="pp-compare-link" href="' + cmp + '">Compare packages &rarr;</a></div></div>';
+      }).join('');
+    });
+  }
+
+  /* ---------- FAVICON / ICONS ---------- */
+  function injectIcons(){
+    var h=document.head; if(!h) return;
+    function add(rel,href,type){ if(document.querySelector('link[rel="'+rel+'"]')) return; var l=document.createElement('link'); l.rel=rel; l.href=href; if(type) l.type=type; h.appendChild(l); }
+    add('icon','assets/img/favicon-64.png?v=4','image/png');
+    add('apple-touch-icon','assets/img/apple-touch-icon.png?v=4');
+  }
+
+  /* ---------- PORTFOLIO ---------- */
+  var IG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>';
+  function buildWebPortfolio(){
+    var data=window.DD_WEB||[];
+    document.querySelectorAll('[data-web-portfolio]').forEach(function(mt){
+      mt.classList.add('web-grid');
+      mt.innerHTML=data.map(function(p){
+        var serv=(p.services||[]).map(function(x){return '<span>'+x+'</span>';}).join('');
+        var mock='<div class="web-mock"><h4>'+p.name+'</h4><p>'+(p.tagline||'')+'</p><span class="tagpill">'+p.industry+'</span></div>';
+        var shot=p.shot ? '<img class="web-shot" src="'+p.shot+'" loading="lazy" decoding="async" alt="'+p.name+' website preview" onerror="this.remove()">' : '';
+        return '<div class="web-card '+(p.cls||'c-purple')+' reveal">'+
+          '<a class="web-prev" href="'+p.url+'" target="_blank" rel="noopener" aria-label="Open '+p.name+' website">'+
+            '<div class="web-chrome"><i></i><i></i><i></i><span class="url">'+p.domain+'</span></div>'+mock+shot+'</a>'+
+          '<div class="web-body"><h3>'+p.name+'</h3><p class="desc">'+p.desc+'</p>'+
+          '<div class="web-serv">'+serv+'</div>'+
+          '<div class="web-actions"><a class="btn btn-primary btn-sm" href="'+p.page+'">View Project</a>'+
+          '<a class="btn btn-ghost btn-sm" href="'+p.url+'" target="_blank" rel="noopener">Visit Website</a></div></div></div>';
+      }).join('');
+    });
+  }
+  function lazyImages(root){
+    var imgs=root.querySelectorAll('img[data-src]');
+    function load(im){ im.src=im.getAttribute('data-src'); im.removeAttribute('data-src'); im.addEventListener('load',function(){ im.classList.add('loaded'); var ph=im.parentNode.querySelector('.ph'); if(ph) ph.classList.add('hide'); }); }
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ load(e.target); io.unobserve(e.target);} });},{rootMargin:'250px'});
+      imgs.forEach(function(i){io.observe(i);});
+    } else imgs.forEach(load);
+  }
+  function buildSocialGallery(){
+    var data=window.DD_SOCIAL||[];
+    if(!data.length) return;
+    var shuffled=data.slice();
+    for(var i=shuffled.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=shuffled[i];shuffled[i]=shuffled[j];shuffled[j]=t;}
+    var ROWS=4;
+    var rows=[[],[],[],[]];
+    shuffled.forEach(function(s,i){rows[i%ROWS].push(s);});
+    var dir=['soc-row-ltr','soc-row-rtl','soc-row-ltr','soc-row-rtl'];
+    var dur=[48,58,40,52];
+    function card(s){
+      var gi=data.indexOf(s);
+      return '<figure class="mq-card" data-lb="'+gi+'" tabindex="0" role="button" aria-label="View '+s.ind+' '+s.cat+' creative">'+
+        '<span class="soc-badge">'+IG+s.pf+'</span>'+
+        '<img src="'+s.t+'" loading="lazy" decoding="async" alt="'+s.ind+' '+s.cat+' — '+s.pf+' creative by Digital Digix">'+
+        '<figcaption class="mq-over"><span class="cat">'+s.cat+'</span><span class="ind">'+s.ind+'</span></figcaption></figure>';
+    }
+    function rowSet(items){ var out=items.slice(); while(out.length<12){ out=out.concat(items); } return out; }
+    document.querySelectorAll('[data-social-gallery]').forEach(function(mt){
+      mt.classList.add('soc-mq');
+      var html='';
+      rows.forEach(function(items,ri){
+        if(!items.length) return;
+        var set=rowSet(items).map(card).join('');
+        html+='<div class="soc-row '+dir[ri]+'"><div class="soc-track" style="animation-duration:'+dur[ri]+'s">'+set+set+'</div></div>';
+      });
+      mt.innerHTML=html;
+      mt.addEventListener('click',function(e){var it=e.target.closest('[data-lb]'); if(it) openLightbox(+it.getAttribute('data-lb'),data);});
+      mt.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){var it=e.target.closest('[data-lb]'); if(it){e.preventDefault(); openLightbox(+it.getAttribute('data-lb'),data);}} });
+    });
+  }
+  var _lb=null,_lbList=[],_lbI=0;
+  function buildLightbox(){
+    if(_lb) return;
+    var X='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+    var L='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>';
+    var R='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>';
+    _lb=document.createElement('div'); _lb.className='lbox';
+    _lb.innerHTML='<button class="lbox-close" aria-label="Close">'+X+'</button><button class="lbox-nav prev" aria-label="Previous">'+L+'</button><img alt=""><button class="lbox-nav next" aria-label="Next">'+R+'</button><div class="lbox-meta"></div>';
+    document.body.appendChild(_lb);
+    _lb.querySelector('.lbox-close').addEventListener('click',closeLightbox);
+    _lb.querySelector('.prev').addEventListener('click',function(e){e.stopPropagation();lbStep(-1);});
+    _lb.querySelector('.next').addEventListener('click',function(e){e.stopPropagation();lbStep(1);});
+    _lb.addEventListener('click',function(e){ if(e.target===_lb) closeLightbox(); });
+    document.addEventListener('keydown',function(e){ if(!_lb.classList.contains('open'))return; if(e.key==='Escape')closeLightbox(); if(e.key==='ArrowLeft')lbStep(-1); if(e.key==='ArrowRight')lbStep(1); });
+  }
+  function openLightbox(i,list){ buildLightbox(); _lbList=list||[]; _lbI=i; lbShow(); _lb.classList.add('open'); document.body.style.overflow='hidden'; }
+  function closeLightbox(){ if(_lb){_lb.classList.remove('open'); document.body.style.overflow='';} }
+  function lbStep(d){ if(!_lbList.length)return; _lbI=(_lbI+d+_lbList.length)%_lbList.length; lbShow(); }
+  function lbShow(){ var s=_lbList[_lbI]||{}; var img=_lb.querySelector('img'); img.src=s.f||s.t||s.src||''; img.alt=((s.ind||'')+' '+(s.cat||'')).trim(); _lb.querySelector('.lbox-meta').innerHTML=(s.cat?('<b>'+s.cat+'</b>'+(s.ind?' &middot; '+s.ind:'')+(s.pf?' &middot; '+s.pf:'')):''); }
+  function initPortfolioTabs(){
+    document.querySelectorAll('[data-pf-tabs]').forEach(function(root){
+      var tabs=root.querySelectorAll('.pf-tab'), panels=root.querySelectorAll('.pf-panel');
+      tabs.forEach(function(t){ t.addEventListener('click',function(){
+        tabs.forEach(function(x){x.classList.remove('active');}); panels.forEach(function(x){x.classList.remove('active');});
+        t.classList.add('active'); var p=document.getElementById(t.getAttribute('data-tab')); if(p)p.classList.add('active');
+      }); });
+    });
+  }
+  function initProjGallery(){
+    document.querySelectorAll('[data-proj-gallery]').forEach(function(g){
+      var nodes=[].slice.call(g.querySelectorAll('img'));
+      var list=nodes.map(function(im){return {f:im.getAttribute('data-full')||im.src,cat:im.getAttribute('data-cap')||'',ind:'',pf:''};});
+      g.addEventListener('click',function(e){var t=e.target.closest('img'); if(!t)return; openLightbox(nodes.indexOf(t),list);});
+    });
+  }
+
+  function wireLogos(){
+    document.querySelectorAll('.brand-img, .intro-img').forEach(function(img){
+      if(img.__w) return; img.__w=1;
+      function fb(){ if(!img.parentNode) return; var s=document.createElement('span'); s.className=img.classList.contains('intro-img')?'intro-fallback':'brand-fallback'; s.setAttribute('role','img'); s.setAttribute('aria-label','Digital Digix Logo'); s.textContent='DD'; img.replaceWith(s); }
+      if(img.complete && img.naturalWidth===0) fb(); else img.addEventListener('error', fb);
+    });
+  }
+
+  function init() {
+    injectIcons(); buildNav(); buildFooter(); buildPricing(); buildWebPortfolio(); buildSocialGallery(); initPortfolioTabs(); initProjGallery(); wire(); initFX();
+    if (document.body.getAttribute('data-page') === 'home') { buildMarquee(); buildIntro(); }
+    wireLogos();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+
+</script>
+</body>
+</html>
